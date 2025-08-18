@@ -1,0 +1,9 @@
+services:
+  mongo-api:
+    image: mongo:7.0.23
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    volumes:
+      - ./databases/init-scripts:/docker-entrypoint-initdb.d:ro
+      - ./.docker-data/mongo-db:/data/db
