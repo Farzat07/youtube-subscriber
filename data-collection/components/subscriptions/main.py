@@ -1,11 +1,11 @@
 from dataclasses import dataclass, field, asdict
 from datetime import datetime, UTC
 from sys import stderr
-from typing import TypedDict, List
+from typing import TypedDict, List, cast
 from bson.objectid import ObjectId
 from feedparser import parse # type: ignore
 from pymongo.collection import Collection
-from pymongo.results import UpdateResult
+from pymongo.results import InsertOneResult, UpdateResult
 import schedule
 from components.database import subscriptions
 from components.subscriptions.typing import SubsDict
@@ -44,15 +44,21 @@ class Subscription:
         if last_video_update > self.last_video_update:
             print("Updating", self._id)
             self.last_video_update = last_video_update
-            self.update_fields(["videos", "last_video_update"])
+            self.update_videos()
         self.last_fetch = datetime.now(tz=UTC)
 
-    def update_fields(self, fields: List[str]) -> UpdateResult:
-        sub = asdict(self)
-        if self._in_db:
-            return self._collection.update_one(
-                {"_id": self._id},
-                {"$set": {key: sub[key] for key in fields}},
-            )
-        self._in_db = True
-        return self._collection.replace_one({"_id": self._id}, sub, upsert=True)
+    def asdict(self) -> SubsDict:
+        return cast(SubsDict, asdict(self))
+
+    def insert(self) -> InsertOneResult:
+        return self._collection.insert_one(self.asdict())
+
+    def update_videos(self) -> UpdateResult:
+        return self._collection.update_one(
+            {"_id": self._id},
+            {"$set": {
+                "videos": self.videos,
+                "last_video_update": self.last_video_update,
+                "last_fetch": self.last_fetch,
+            }},
+        )
