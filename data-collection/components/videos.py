@@ -5,6 +5,8 @@ class VideoTuple(NamedTuple):
     id: str
     link: str
     title: str
+    author: str
+    author_channel: str
     published: datetime
     updated: datetime
     thumbnail: str
@@ -16,6 +18,8 @@ class VideoTuple(NamedTuple):
             id = entry.id,
             link = entry.link,
             title = entry.title,
+            author = entry.author_detail.name,
+            author_channel = entry.author_detail.href,
             published = datetime.fromisoformat(entry.published),
             updated = datetime.fromisoformat(entry.updated),
             thumbnail = entry.media_thumbnail[0]["url"],
