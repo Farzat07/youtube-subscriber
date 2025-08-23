@@ -5,5 +5,13 @@ services:
     ports:
       - 27017:27017
     volumes:
-      - ./databases/init-scripts:/docker-entrypoint-initdb.d:ro
       - ./.docker-data/mongo-db:/data/db
+  rabbitmq:
+    image: rabbitmq:3.13.7-management
+    container_name: yt-rabbit
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    volumes:
+      - ./.docker-data/rabbit-data:/var/lib/rabbitmq/
+      - ./.docker-data/rabbit-log:/var/log/rabbitmq
