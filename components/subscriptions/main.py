@@ -20,6 +20,7 @@ class Subscription:
     time_between_fetches: int
     last_fetch: datetime = datetime.min.replace(tzinfo=UTC)
     last_video_update: datetime = datetime.min.replace(tzinfo=UTC)
+    last_viewed: datetime = datetime.min.replace(tzinfo=UTC)
     videos: List[VideoTuple] = field(default_factory=list)
     subscribers: List[ObjectId] = field(default_factory=list)
 
@@ -52,7 +53,7 @@ class Subscription:
         self.last_fetch = datetime.now(tz=UTC)
         if last_video_update > self.last_video_update:
             print("Updating", self._id, end=", ")
-            print("New vid count:", len(self.videos))
+            print("Video count now:", len(self.videos))
             self.last_video_update = last_video_update
             self.update_fetch(videos=True)
         else:

@@ -9,5 +9,6 @@ class SubsDict(TypedDict):
     time_between_fetches: int # In minutes.
     last_fetch: datetime
     last_video_update: datetime
+    last_viewed: datetime
     videos: List[VideoTuple]
     subscribers: List[ObjectId]
