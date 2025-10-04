@@ -1,13 +1,13 @@
 services:
   mongo-api:
-    image: mongo:7.0.23
-    container_name: mongodb
+    image: mongo:8.0
+    container_name: yt-mongodb
     ports:
       - 27017:27017
     volumes:
       - ./.docker-data/mongo-db:/data/db
   rabbitmq:
-    image: rabbitmq:3.13.7-management
+    image: rabbitmq:4.1-management
     container_name: yt-rabbit
     ports:
       - '5672:5672'
