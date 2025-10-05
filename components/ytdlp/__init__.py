@@ -1,4 +1,5 @@
 from json import dumps
+from random import randrange
 from sys import stderr
 from typing import Any, Dict
 
@@ -13,6 +14,6 @@ def obtain_vid_info(url: str) -> Dict[str, Any]:
     except Exception as e:
         print("Ran into an exception while fetching", url + ":", e, file=stderr)
         # This is a dummy project. If yt-dlp fails, repeatedly parsing YouTube
-        # would only get us possibly blocked. Better return an empty string
-        # instead.
-        return { "duration_string": "" }
+        # would only get us possibly blocked. Better return an obviously random
+        # string instead.
+        return { "duration_string": "-1:%02d" % randrange(60) }
