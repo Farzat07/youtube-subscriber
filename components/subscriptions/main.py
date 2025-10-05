@@ -75,3 +75,9 @@ class Subscription:
             {"_id": self._id},
             {"$set": updated_values},
         )
+
+    def update_videos(self) -> UpdateResult:
+        return self._collection.update_one(
+            {"_id": self._id},
+            {"$set": {"videos": self.videos}}
+        )
