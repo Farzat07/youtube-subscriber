@@ -6,12 +6,9 @@ from bson.objectid import ObjectId
 from feedparser import parse # type: ignore
 from pymongo.collection import Collection
 from pymongo.results import InsertOneResult, UpdateResult
-from schedule import Job, Scheduler
 from components.database import subscriptions
 from components.subscriptions.typing import SubsDict
 from components.videos import VideoTuple
-
-default_scheduler = Scheduler()
 
 @dataclass
 class Subscription:
@@ -26,14 +23,8 @@ class Subscription:
 
     def __post_init__(self) -> None:
         self._collection: Collection[SubsDict] = subscriptions
-        self._scheduler: Scheduler = default_scheduler
         if len(self.videos) and type(self.videos[0]) != VideoTuple:
             self.videos = [VideoTuple._make(vid) for vid in self.videos]
-
-    def initialise_job(self) -> None:
-        self._job: Job = self._scheduler.every(self.time_between_fetches).minutes.do(self.fetch)
-        if self.last_fetch > datetime.min.replace(tzinfo=UTC):
-            self._job.next_run += self.last_fetch - datetime.now(tz=UTC)
 
     def fetch(self) -> None:
         try:
