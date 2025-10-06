@@ -26,6 +26,9 @@ class Subscription:
         if len(self.videos) and type(self.videos[0]) != VideoTuple:
             self.videos = [VideoTuple._make(vid) for vid in self.videos]
 
+    def get_new_vids(self) -> List[VideoTuple]:
+        return [vid for vid in self.videos if vid.published > self.last_viewed]
+
     def fetch(self) -> None:
         try:
             rss = parse(self.link)
