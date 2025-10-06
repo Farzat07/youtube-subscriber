@@ -12,7 +12,7 @@ from components.videos import VideoTuple
 from components.ytdlp import obtain_vid_info
 from data_analyser.utils import analyse_video, analyse_subscription, analyse_collection
 
-def url_based_extract_info(url: str, download: Any=None) -> Dict[str, Any]:
+def url_based_extract_info(url: str, **_: Any) -> Dict[str, Any]:
     hash = md5(url.encode()).hexdigest()
     hash_int = int(hash[:4], 16)
     seconds = hash_int %  60
