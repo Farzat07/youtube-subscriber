@@ -3,6 +3,7 @@ certifi==2025.8.3
 charset-normalizer==3.4.3
 click==8.2.1
 dnspython==2.7.0
+dotenv==0.9.9
 feedparser==6.0.12
 Flask==3.1.2
 flask-cors==6.0.1
@@ -17,6 +18,7 @@ mypy_extensions==1.1.0
 packaging==25.0
 pathspec==0.12.1
 pymongo==4.14.0
+python-dotenv==1.1.1
 pytz==2025.2
 schedule==1.2.2
 sentinels==1.1.1

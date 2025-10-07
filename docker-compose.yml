@@ -2,16 +2,27 @@ services:
   mongo-api:
     image: mongo:8.0
     container_name: yt-mongodb
+    env_file:
+      - .env
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASS}
+      - MONGO_INITDB_DATABASE=admin
     ports:
-      - 27017:27017
+      - 127.0.0.1:27017:27017
     volumes:
       - ./.docker-data/mongo-db:/data/db
   rabbitmq:
     image: rabbitmq:4.1-management
     container_name: yt-rabbit
+    env_file:
+      - .env
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBIT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBIT_PASS}
     ports:
-      - '5672:5672'
-      - '15672:15672'
+      - 127.0.0.1:5672:5672
+      - 127.0.0.1:15672:15672
     volumes:
       - ./.docker-data/rabbit-data:/var/lib/rabbitmq/
       - ./.docker-data/rabbit-log:/var/log/rabbitmq
