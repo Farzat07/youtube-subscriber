@@ -6,6 +6,7 @@ from components.videos import VideoTuple
 class SubsDict(TypedDict):
     _id: str
     link: str
+    title: str
     time_between_fetches: int # In seconds.
     last_fetch: datetime
     last_video_update: datetime

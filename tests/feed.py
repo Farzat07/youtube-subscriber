@@ -16,6 +16,7 @@ class TestFeeds(TestCase):
         sub = Subscription(
             _id="yt:channel:bla",
             link="http://www.youtube.com/feeds/videos.xml?channel_id=UCbla",
+            title="bla",
             time_between_fetches=5,
         )
         sub._collection = self.collection
@@ -28,7 +29,8 @@ class TestFeeds(TestCase):
     def test_feed_fetch(self) -> None:
         sub = Subscription(
             _id="yt:channel:hlgI3UHCOnwUGzWzbJ3H5w",
-            link=r"tests/data/feed@ytnnews24@001.xml",
+            link="tests/data/feed@ytnnews24@001.xml",
+            title="YTN",
             time_between_fetches=1,
         )
         sub._collection = self.collection
@@ -43,7 +45,8 @@ class TestFeeds(TestCase):
     def test_feed_update(self) -> None:
         sub = Subscription(
             _id="yt:channel:hlgI3UHCOnwUGzWzbJ3H5w",
-            link=r"tests/data/feed@ytnnews24@001.xml",
+            link="tests/data/feed@ytnnews24@001.xml",
+            title="YTN",
             time_between_fetches=1,
         )
         sub._collection = self.collection

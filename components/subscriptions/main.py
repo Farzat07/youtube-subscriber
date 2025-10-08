@@ -14,6 +14,7 @@ from components.videos import VideoTuple
 class Subscription:
     _id: str
     link: str
+    title: str
     time_between_fetches: int
     last_fetch: datetime = datetime.min.replace(tzinfo=UTC)
     last_video_update: datetime = datetime.min.replace(tzinfo=UTC)

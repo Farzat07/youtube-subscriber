@@ -19,7 +19,8 @@ class TestAnalyser(TestCase):
 
         self.sub1 = Subscription(
             _id="yt:channel:hlgI3UHCOnwUGzWzbJ3H5w",
-            link=r"tests/data/feed@ytnnews24@001.xml",
+            link="tests/data/feed@ytnnews24@001.xml",
+            title="YTN",
             time_between_fetches=1,
         )
         self.sub1._collection = self.collection
@@ -84,7 +85,8 @@ class TestAnalyser(TestCase):
                 self.assertTrue(vid.analysed)
         self.sub2 = Subscription(
             _id="yt:channel:7YOGHUfC1Tb6E4pudI9STA",
-            link=r"tests/data/feed@mentaloutlaw@001.xml",
+            link="tests/data/feed@mentaloutlaw@001.xml",
+            title="YTN",
             time_between_fetches=1,
         )
         self.sub2._collection = self.collection

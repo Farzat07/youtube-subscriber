@@ -33,6 +33,7 @@ def add_sub() -> Dict[str, Any]:
     sub = Subscription(
         _id=sub_info["id"],
         link=sub_info["link"],
+        title=sub_info["title"],
         time_between_fetches=int(request.form["time_between_fetches"]),
     )
     sub.insert()
