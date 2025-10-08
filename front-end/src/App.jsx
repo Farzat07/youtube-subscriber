@@ -26,23 +26,29 @@ function App() {
       const response = await axios.get(`${API_BASE_URL}/subs-info`);
 
       if (response.data && Array.isArray(response.data)) {
-        const formattedChannels = response.data.map(channel => {
-          // Extract the channel ID from the _id field
-          const channelId = channel._id.replace('yt:channel:', '');
+        const formattedChannels = response.data.map(subscription => {
+          // Extract the ID and type from the _id field
+          const isPlaylist = subscription._id.startsWith('yt:playlist:');
+          const id = subscription._id.replace('yt:channel:', '').replace('yt:playlist:', '');
+          const type = isPlaylist ? 'playlist' : 'channel';
+
           return {
-            id: channelId,
-            _id: channel._id,
-            last_video_update: channel.last_video_update,
-            new_vids: channel.new_vids,
-            time_between_fetches: channel.time_between_fetches,
-            videos: channel.videos
+            id: id,
+            _id: subscription._id,
+            type: type,
+            title: subscription.title || id, // Use title if available, fallback to ID
+            last_fetch: subscription.last_fetch,
+            last_video_update: subscription.last_video_update,
+            new_vids: subscription.new_vids,
+            time_between_fetches: subscription.time_between_fetches,
+            videos: subscription.videos
           };
         });
         setChannels(formattedChannels);
       }
     } catch (err) {
       console.error('Error fetching channels:', err);
-      setError('Failed to fetch available channels.');
+      setError('Failed to fetch available subscriptions.');
     } finally {
       setChannelsLoading(false);
     }
@@ -54,7 +60,11 @@ function App() {
       setError(null);
       setExpandedDescriptions({}); // Reset expanded states when fetching new videos
 
-      const apiUrl = `${API_BASE_URL}/vid-from-link/yt:channel:${channelId}`;
+      // Find the full _id for the API call
+      const subscription = channels.find(ch => ch.id === channelId);
+      if (!subscription) return;
+
+      const apiUrl = `${API_BASE_URL}/vid-from-link/${subscription._id}`;
       const response = await axios.get(apiUrl);
 
       if (response.data && Array.isArray(response.data)) {
@@ -63,7 +73,7 @@ function App() {
         throw new Error('Invalid response format');
       }
     } catch (err) {
-      setError('Failed to fetch videos. Please check the channel and ensure the API is running.');
+      setError('Failed to fetch videos. Please check the subscription and ensure the API is running.');
       console.error('Error fetching videos:', err);
     } finally {
       setLoading(false);
@@ -200,11 +210,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>YouTube Channel Videos</h1>
+        <h1>YouTube Subscriptions</h1>
 
         <div className="channel-selector">
           <div className="selector-header">
-            <label htmlFor="channel-select">Select Channel:</label>
+            <label htmlFor="channel-select">Select Subscription:</label>
             <button
               onClick={handleRefreshChannels}
               className="refresh-button"
@@ -222,15 +232,15 @@ function App() {
             disabled={channelsLoading || channels.length === 0}
           >
             {channelsLoading ? (
-              <option value="">Loading channels...</option>
+              <option value="">Loading subscriptions...</option>
             ) : channels.length === 0 ? (
-              <option value="">No channels available</option>
+              <option value="">No subscriptions available</option>
             ) : (
               <>
-                <option value="">Choose a channel...</option>
+                <option value="">Choose a subscription...</option>
                 {channels.map((channel) => (
                   <option key={channel.id} value={channel.id}>
-                    {channel.id} ({channel.videos} videos, {channel.new_vids} new)
+                    {channel.type === 'playlist' ? '📋' : '📺'} {channel.title} - {channel.id} ({channel.videos} videos, {channel.new_vids} new)
                   </option>
                 ))}
               </>
@@ -239,12 +249,22 @@ function App() {
 
           {selectedChannelId && channels.length > 0 && (
             <div className="channel-info">
-              <p>
-                Selected: <strong>{selectedChannelId}</strong>
-                {channels.find(ch => ch.id === selectedChannelId)?.last_video_update && (
-                  <span> • Last updated: {formatRelativeTime(channels.find(ch => ch.id === selectedChannelId).last_video_update)}</span>
-                )}
+              <p className="subscription-main">
+                <strong>{channels.find(ch => ch.id === selectedChannelId)?.title} - {selectedChannelId}</strong>
+                <span className="subscription-type">
+                  ({channels.find(ch => ch.id === selectedChannelId)?.type})
+                </span>
               </p>
+              {(channels.find(ch => ch.id === selectedChannelId)?.last_video_update || channels.find(ch => ch.id === selectedChannelId)?.last_fetch) && (
+                <p className="last-dates">
+                  {channels.find(ch => ch.id === selectedChannelId)?.last_video_update && (
+                    <span className="last-updated">Last updated: {formatRelativeTime(channels.find(ch => ch.id === selectedChannelId).last_video_update)}</span>
+                  )}
+                  {channels.find(ch => ch.id === selectedChannelId)?.last_fetch && (
+                    <span className="last-fetched">Last fetched: {formatRelativeTime(channels.find(ch => ch.id === selectedChannelId).last_fetch)}</span>
+                  )}
+                </p>
+              )}
             </div>
           )}
         </div>
@@ -265,13 +285,13 @@ function App() {
                 <h3>Add New Subscription</h3>
 
                 <div className="form-group">
-                  <label htmlFor="subscription-url">YouTube Channel URL:</label>
+                  <label htmlFor="subscription-url">YouTube Channel or Playlist URL:</label>
                   <input
                     id="subscription-url"
                     type="url"
                     value={subscriptionUrl}
                     onChange={(e) => setSubscriptionUrl(e.target.value)}
-                    placeholder="https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxx"
+                    placeholder="https://www.youtube.com/channel/UCxxx... or https://www.youtube.com/playlist?list=PLxxx..."
                     className="subscription-input"
                     disabled={addingSubscription}
                   />
@@ -320,7 +340,7 @@ function App() {
       </header>
 
       <main className="main-content">
-        {channelsLoading && <div className="loading">Loading channels...</div>}
+        {channelsLoading && <div className="loading">Loading subscriptions...</div>}
 
         {error && (
           <div className="error">
@@ -333,22 +353,23 @@ function App() {
 
         {!channelsLoading && channels.length === 0 && !error && (
           <div className="no-channels">
-            <h3>No channels available</h3>
-            <p>No YouTube channels found in the subscription list.</p>
+            <h3>No subscriptions available</h3>
+            <p>No YouTube channels or playlists found in the subscription list.</p>
             <button onClick={handleRefreshChannels} className="retry-button">
-              Refresh Channels
+              Refresh Subscriptions
             </button>
           </div>
         )}
 
         {loading && selectedChannelId && (
-          <div className="loading">Loading videos for {selectedChannelId}...</div>
+          <div className="loading">Loading videos for {channels.find(ch => ch.id === selectedChannelId)?.title}...</div>
         )}
 
         {!loading && !error && selectedChannelId && (
           <div className="videos-container">
             <h2>
-              Latest Videos from {selectedChannelId}
+              Latest Videos from {channels.find(ch => ch.id === selectedChannelId)?.title}
+              <span className="subscription-id"> - {selectedChannelId}</span>
               {videos.length > 0 && ` (${videos.length})`}
             </h2>
             <div className="videos-grid">
@@ -426,15 +447,15 @@ function App() {
 
         {!loading && !error && selectedChannelId && videos.length === 0 && (
           <div className="no-videos">
-            <h3>No videos found for this channel</h3>
-            <p>The channel might not have any videos or there was an issue loading them.</p>
+            <h3>No videos found for this subscription</h3>
+            <p>The channel or playlist might not have any videos or there was an issue loading them.</p>
           </div>
         )}
 
         {!channelsLoading && !selectedChannelId && channels.length > 0 && (
           <div className="no-selection">
-            <h3>Please select a channel to view videos</h3>
-            <p>Choose a channel from the dropdown above to see its latest videos.</p>
+            <h3>Please select a subscription to view videos</h3>
+            <p>Choose a channel or playlist from the dropdown above to see its latest videos.</p>
           </div>
         )}
       </main>
