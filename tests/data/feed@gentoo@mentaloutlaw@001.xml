@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom">
+ <link rel="self" href="http://www.youtube.com/feeds/videos.xml?playlist_id=PL3cu45aM3C2CADmCYeVhS4KTVut9MoMc9"/>
+ <id>yt:playlist:PL3cu45aM3C2CADmCYeVhS4KTVut9MoMc9</id>
+ <yt:playlistId>PL3cu45aM3C2CADmCYeVhS4KTVut9MoMc9</yt:playlistId>
+ <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+ <title>Gentoo</title>
+ <author>
+  <name>Mental Outlaw</name>
+  <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+ </author>
+ <published>2019-12-27T13:24:31+00:00</published>
+ <entry>
+  <id>yt:video:Qv-H13sKrGY</id>
+  <yt:videoId>Qv-H13sKrGY</yt:videoId>
+  <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+  <title>Best Gentoo Linux Installation Guide 2019 part 1</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=Qv-H13sKrGY"/>
+  <author>
+   <name>Mental Outlaw</name>
+   <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+  </author>
+  <published>2019-12-03T20:27:08+00:00</published>
+  <updated>2025-08-05T10:42:25+00:00</updated>
+  <media:group>
+   <media:title>Best Gentoo Linux Installation Guide 2019 part 1</media:title>
+   <media:content url="https://www.youtube.com/v/Qv-H13sKrGY?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/Qv-H13sKrGY/hqdefault.jpg" width="480" height="360"/>
+   <media:description>In this video I go through the gentoo handbook step by step and show you how to get a working gentoo system up and running, this is a part one of the Gentoo Linux installation, make sure to subscribe and hit the bell so you know when the next part goes up.
+
+
+
+Subscribe to my YouTube channel http://goo.gl/9U10Wz 
+
+
+
+AMD 64 handbook
+https://wiki.gentoo.org/wiki/Handbook:AMD64
+
+
+gentoo linux script (contains my make.conf and kernel, use at your own risk :D)
+https://github.com/MentalOutlaw/gentootestscript ₿💰💵💲Help Support the Channel by Donating Crypto💲💵💰₿
+
+
+
+Dash
+Xh9PXPEy5RoLJgFDGYCDjrbXdjshMaYerz
+
+Zcash
+t1aWtU5SBpxuUWBSwDKy4gTkT2T1ZwtFvrr
+
+Chainlink
+0x0f7f21D267d2C9dbae17fd8c20012eFEA3678F14
+
+Bitcoin Cash
+qz2st00dtu9e79zrq5wshsgaxsjw299n7c69th8ryp
+
+Etherum Classic
+0xeA641e59913960f578ad39A6B4d02051A5556BfC
+
+USD Coin
+0x0B045f743A693b225630862a3464B52fefE79FdB Bitcoin
+bc1qyj5p6hzqkautq4d3zgzwfllm7xv9wjeqkv857z
+
+Ethereum
+0x35B505EB5b717D11c28D163fb1412C3344c7684d
+
+Litecoin
+LQviuYVbvJs1jCSiEDwWAarycA4xsqJo7D
+
+DOGE
+D7MPGcUT4sXkGroGbs4QVQGyXqXd6QfmXF</media:description>
+   <media:community>
+    <media:starRating count="2400" average="5.00" min="1" max="5"/>
+    <media:statistics views="146419"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:zS32HTrIBGw</id>
+  <yt:videoId>zS32HTrIBGw</yt:videoId>
+  <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+  <title>Best Gentoo Linux Installation Guide 2019 Part 2</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=zS32HTrIBGw"/>
+  <author>
+   <name>Mental Outlaw</name>
+   <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+  </author>
+  <published>2019-12-14T15:56:02+00:00</published>
+  <updated>2025-08-05T10:42:27+00:00</updated>
+  <media:group>
+   <media:title>Best Gentoo Linux Installation Guide 2019 Part 2</media:title>
+   <media:content url="https://www.youtube.com/v/zS32HTrIBGw?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/zS32HTrIBGw/hqdefault.jpg" width="480" height="360"/>
+   <media:description>In this video I finish the gentoo linux installation I started in part 1, and I show you how to continue past installation of the custom kernel.  Please like and share this video if you found it helpful.
+
+
+
+Subscribe to my YouTube channel http://goo.gl/9U10Wz Watch part 1 if you haven't already https://www.youtube.com/watch?v=Qv-H13sKrGY ₿💰💵💲Help Support the Channel by Donating Crypto💲💵💰₿
+
+
+
+Dash
+Xh9PXPEy5RoLJgFDGYCDjrbXdjshMaYerz
+
+Zcash
+t1aWtU5SBpxuUWBSwDKy4gTkT2T1ZwtFvrr
+
+Chainlink
+0x0f7f21D267d2C9dbae17fd8c20012eFEA3678F14
+
+Bitcoin Cash
+qz2st00dtu9e79zrq5wshsgaxsjw299n7c69th8ryp
+
+Etherum Classic
+0xeA641e59913960f578ad39A6B4d02051A5556BfC
+
+USD Coin
+0x0B045f743A693b225630862a3464B52fefE79FdB Bitcoin
+bc1qyj5p6hzqkautq4d3zgzwfllm7xv9wjeqkv857z
+
+Ethereum
+0x35B505EB5b717D11c28D163fb1412C3344c7684d
+
+Litecoin
+LQviuYVbvJs1jCSiEDwWAarycA4xsqJo7D
+
+DOGE
+D7MPGcUT4sXkGroGbs4QVQGyXqXd6QfmXF</media:description>
+   <media:community>
+    <media:starRating count="633" average="5.00" min="1" max="5"/>
+    <media:statistics views="34756"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:NVWVHiLx1sU</id>
+  <yt:videoId>NVWVHiLx1sU</yt:videoId>
+  <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+  <title>Configuring a Custom Linux Kernel (5.6.7-gentoo)</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=NVWVHiLx1sU"/>
+  <author>
+   <name>Mental Outlaw</name>
+   <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+  </author>
+  <published>2020-05-02T19:43:28+00:00</published>
+  <updated>2025-08-05T10:42:09+00:00</updated>
+  <media:group>
+   <media:title>Configuring a Custom Linux Kernel (5.6.7-gentoo)</media:title>
+   <media:content url="https://www.youtube.com/v/NVWVHiLx1sU?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/NVWVHiLx1sU/hqdefault.jpg" width="480" height="360"/>
+   <media:description>In this video I show you how to configure a custom Linux kernel, and the options that I use in my kernel configuration
+
+
+
+Subscribe to my YouTube channel http://goo.gl/9U10Wz
+and be sure to click that notification bell so you know when new videos are released. ₿💰💵💲Help Support the Channel by Donating Crypto💲💵💰₿
+
+
+
+Dash
+Xh9PXPEy5RoLJgFDGYCDjrbXdjshMaYerz
+
+Zcash
+t1aWtU5SBpxuUWBSwDKy4gTkT2T1ZwtFvrr
+
+Chainlink
+0x0f7f21D267d2C9dbae17fd8c20012eFEA3678F14
+
+Bitcoin Cash
+qz2st00dtu9e79zrq5wshsgaxsjw299n7c69th8ryp
+
+Etherum Classic
+0xeA641e59913960f578ad39A6B4d02051A5556BfC
+
+USD Coin
+0x0B045f743A693b225630862a3464B52fefE79FdB Bitcoin
+bc1qyj5p6hzqkautq4d3zgzwfllm7xv9wjeqkv857z
+
+Ethereum
+0x35B505EB5b717D11c28D163fb1412C3344c7684d
+
+Litecoin
+LQviuYVbvJs1jCSiEDwWAarycA4xsqJo7D
+
+DOGE
+D7MPGcUT4sXkGroGbs4QVQGyXqXd6QfmXF</media:description>
+   <media:community>
+    <media:starRating count="3437" average="5.00" min="1" max="5"/>
+    <media:statistics views="144374"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:ePUIMnIFkww</id>
+  <yt:videoId>ePUIMnIFkww</yt:videoId>
+  <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+  <title>Installing Steam on Gentoo Linux</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=ePUIMnIFkww"/>
+  <author>
+   <name>Mental Outlaw</name>
+   <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+  </author>
+  <published>2020-05-03T13:28:30+00:00</published>
+  <updated>2025-09-17T14:07:22+00:00</updated>
+  <media:group>
+   <media:title>Installing Steam on Gentoo Linux</media:title>
+   <media:content url="https://www.youtube.com/v/ePUIMnIFkww?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/ePUIMnIFkww/hqdefault.jpg" width="480" height="360"/>
+   <media:description>In this Video I show you how to install steam on Gentoo linux, by adding the steam overlay with layman.
+
+
+
+Subscribe to my YouTube channel http://goo.gl/9U10Wz
+and be sure to click that notification bell so you know when new videos are released.
+
+
+USE Changes Required by Steam
+The description for a Youtube video is limited to 5k characters so I couldn't write my use strings here, you can find them at the link below :D
+https://pastebin.com/XJSCM2a3 ₿💰💵💲Help Support the Channel by Donating Crypto💲💵💰₿
+
+
+
+Dash
+Xh9PXPEy5RoLJgFDGYCDjrbXdjshMaYerz
+
+Zcash
+t1aWtU5SBpxuUWBSwDKy4gTkT2T1ZwtFvrr
+
+Chainlink
+0x0f7f21D267d2C9dbae17fd8c20012eFEA3678F14
+
+Bitcoin Cash
+qz2st00dtu9e79zrq5wshsgaxsjw299n7c69th8ryp
+
+Etherum Classic
+0xeA641e59913960f578ad39A6B4d02051A5556BfC
+
+USD Coin
+0x0B045f743A693b225630862a3464B52fefE79FdB Bitcoin
+bc1qyj5p6hzqkautq4d3zgzwfllm7xv9wjeqkv857z
+
+Ethereum
+0x35B505EB5b717D11c28D163fb1412C3344c7684d
+
+Litecoin
+LQviuYVbvJs1jCSiEDwWAarycA4xsqJo7D
+
+DOGE
+D7MPGcUT4sXkGroGbs4QVQGyXqXd6QfmXF</media:description>
+   <media:community>
+    <media:starRating count="1138" average="5.00" min="1" max="5"/>
+    <media:statistics views="49591"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:9vHHZfHaAYA</id>
+  <yt:videoId>9vHHZfHaAYA</yt:videoId>
+  <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+  <title>How to Upgrade Your Gentoo Linux Kernel - Best Guide on YouTube!</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=9vHHZfHaAYA"/>
+  <author>
+   <name>Mental Outlaw</name>
+   <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+  </author>
+  <published>2020-06-15T18:16:42+00:00</published>
+  <updated>2025-08-05T10:42:08+00:00</updated>
+  <media:group>
+   <media:title>How to Upgrade Your Gentoo Linux Kernel - Best Guide on YouTube!</media:title>
+   <media:content url="https://www.youtube.com/v/9vHHZfHaAYA?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/9vHHZfHaAYA/hqdefault.jpg" width="480" height="360"/>
+   <media:description>In this video I show you how to upgrade your kernel on Gentoo Linux, I go over the full steps from how to make newer kernels available, how to download them, compile them, and make them bootable.  The commands used in this video are written below
+
+
+0. write &quot;sys-kernel/gentoo-sources ~amd64&quot; to your package.accept_keywords file
+1. emerge --sync
+2. emerge -uDNq --with-bdeps=y
+3. cp /usr/src/linux/.config $(uname -r).config
+
+4. eselect kernel list
+5. eselect kernel set &quot;NEW KERNEL NUMBER&quot;
+become root, or add sudo to the beginning of the following commands
+make mrproper
+6. copy the configuration file you backed up in step 3
+7. mount &quot;boot partition&quot; /boot (don't forget -U if using UUID)
+8. make modules_prepare
+9. make -j4 &amp;&amp; make modules_install &amp;&amp; make install
+
+10. emerge @module-rebuild
+
+11. grub-mkconfig -o /boot/grub/grub.cfg
+12. Reboot into your new kernel, congratulations, you're done :D
+
+
+
+
+
+
+
+
+
+Subscribe to my YouTube channel http://goo.gl/9U10Wz
+and be sure to click that notification bell so you know when new videos are released. ₿💰💵💲Help Support the Channel by Donating Crypto💲💵💰₿
+
+
+
+Dash
+Xh9PXPEy5RoLJgFDGYCDjrbXdjshMaYerz
+
+Zcash
+t1aWtU5SBpxuUWBSwDKy4gTkT2T1ZwtFvrr
+
+Chainlink
+0x0f7f21D267d2C9dbae17fd8c20012eFEA3678F14
+
+Bitcoin Cash
+qz2st00dtu9e79zrq5wshsgaxsjw299n7c69th8ryp
+
+Etherum Classic
+0xeA641e59913960f578ad39A6B4d02051A5556BfC
+
+USD Coin
+0x0B045f743A693b225630862a3464B52fefE79FdB Bitcoin
+bc1qyj5p6hzqkautq4d3zgzwfllm7xv9wjeqkv857z
+
+Ethereum
+0x35B505EB5b717D11c28D163fb1412C3344c7684d
+
+Litecoin
+LQviuYVbvJs1jCSiEDwWAarycA4xsqJo7D
+
+DOGE
+D7MPGcUT4sXkGroGbs4QVQGyXqXd6QfmXF</media:description>
+   <media:community>
+    <media:starRating count="1187" average="5.00" min="1" max="5"/>
+    <media:statistics views="40685"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:k7H5ijABbLw</id>
+  <yt:videoId>k7H5ijABbLw</yt:videoId>
+  <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+  <title>Sound Without the Bloat in Gnu/Linux</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=k7H5ijABbLw"/>
+  <author>
+   <name>Mental Outlaw</name>
+   <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+  </author>
+  <published>2020-05-28T23:01:56+00:00</published>
+  <updated>2025-08-05T10:42:06+00:00</updated>
+  <media:group>
+   <media:title>Sound Without the Bloat in Gnu/Linux</media:title>
+   <media:content url="https://www.youtube.com/v/k7H5ijABbLw?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i4.ytimg.com/vi/k7H5ijABbLw/hqdefault.jpg" width="480" height="360"/>
+   <media:description>In this video I show you how to enable sound on a minimalist linux distribution without including unnecessary bloat.
+
+
+
+Subscribe to my YouTube channel http://goo.gl/9U10Wz
+and be sure to click that notification bell so you know when new videos are released. ₿💰💵💲Help Support the Channel by Donating Crypto💲💵💰₿
+
+
+
+Dash
+Xh9PXPEy5RoLJgFDGYCDjrbXdjshMaYerz
+
+Zcash
+t1aWtU5SBpxuUWBSwDKy4gTkT2T1ZwtFvrr
+
+Chainlink
+0x0f7f21D267d2C9dbae17fd8c20012eFEA3678F14
+
+Bitcoin Cash
+qz2st00dtu9e79zrq5wshsgaxsjw299n7c69th8ryp
+
+Etherum Classic
+0xeA641e59913960f578ad39A6B4d02051A5556BfC
+
+USD Coin
+0x0B045f743A693b225630862a3464B52fefE79FdB Bitcoin
+bc1qyj5p6hzqkautq4d3zgzwfllm7xv9wjeqkv857z
+
+Ethereum
+0x35B505EB5b717D11c28D163fb1412C3344c7684d
+
+Litecoin
+LQviuYVbvJs1jCSiEDwWAarycA4xsqJo7D
+
+DOGE
+D7MPGcUT4sXkGroGbs4QVQGyXqXd6QfmXF</media:description>
+   <media:community>
+    <media:starRating count="2474" average="5.00" min="1" max="5"/>
+    <media:statistics views="64643"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:I3uIl9w287g</id>
+  <yt:videoId>I3uIl9w287g</yt:videoId>
+  <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+  <title>Gentoo LTO Overlay Installation Guide (LTO, -O3, &amp; Graphite)</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=I3uIl9w287g"/>
+  <author>
+   <name>Mental Outlaw</name>
+   <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+  </author>
+  <published>2020-07-17T22:33:44+00:00</published>
+  <updated>2025-08-05T10:42:03+00:00</updated>
+  <media:group>
+   <media:title>Gentoo LTO Overlay Installation Guide (LTO, -O3, &amp; Graphite)</media:title>
+   <media:content url="https://www.youtube.com/v/I3uIl9w287g?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/I3uIl9w287g/hqdefault.jpg" width="480" height="360"/>
+   <media:description>In this video I show you how to install the Gentoo LTO overlay https://github.com/InBetweenNames/gentooLTO
+
+
+***Commands used in this video***
+
+
+sudo layman -a mv
+sudo layman -a lto-overlay
+
+
+add the following strings to your package.accept_keyworks
+sys-config/ltoize ~amd64
+app-portage/portage-bashrc-mv ~amd64
+app-shells/runtitle ~amd64
+
+
+Its also a good idea to upgrade GCC before building LTO
+
+
+sudo emerge sys-config/ltoize
+
+
+emerge -e @world
+
+
+***Links to learn more***
+Graphite https://polly.llvm.org/
+
+O3 https://wiki.gentoo.org/wiki/GCC_optimization
+
+LTO https://llvm.org/docs/LinkTimeOptimization.html
+
+
+
+Subscribe to my YouTube channel http://goo.gl/9U10Wz
+and be sure to click that notification bell so you know when new videos are released.
+
+
+₿💰💵💲Help Support the Channel by Donating Crypto💲💵💰₿
+
+
+
+Dash
+Xh9PXPEy5RoLJgFDGYCDjrbXdjshMaYerz
+
+Zcash
+t1aWtU5SBpxuUWBSwDKy4gTkT2T1ZwtFvrr
+
+Chainlink
+0x0f7f21D267d2C9dbae17fd8c20012eFEA3678F14
+
+Bitcoin Cash
+qz2st00dtu9e79zrq5wshsgaxsjw299n7c69th8ryp
+
+Etherum Classic
+0xeA641e59913960f578ad39A6B4d02051A5556BfC
+
+USD Coin
+0x0B045f743A693b225630862a3464B52fefE79FdB Bitcoin
+bc1qyj5p6hzqkautq4d3zgzwfllm7xv9wjeqkv857z
+
+Ethereum
+0x35B505EB5b717D11c28D163fb1412C3344c7684d
+
+Litecoin
+LQviuYVbvJs1jCSiEDwWAarycA4xsqJo7D
+
+DOGE
+D7MPGcUT4sXkGroGbs4QVQGyXqXd6QfmXF</media:description>
+   <media:community>
+    <media:starRating count="535" average="5.00" min="1" max="5"/>
+    <media:statistics views="17090"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:OxZ1CqCk9SY</id>
+  <yt:videoId>OxZ1CqCk9SY</yt:videoId>
+  <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+  <title>Gentoo USE Flags</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=OxZ1CqCk9SY"/>
+  <author>
+   <name>Mental Outlaw</name>
+   <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+  </author>
+  <published>2020-08-14T21:45:20+00:00</published>
+  <updated>2025-08-10T14:32:30+00:00</updated>
+  <media:group>
+   <media:title>Gentoo USE Flags</media:title>
+   <media:content url="https://www.youtube.com/v/OxZ1CqCk9SY?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i4.ytimg.com/vi/OxZ1CqCk9SY/hqdefault.jpg" width="480" height="360"/>
+   <media:description>In this video I discuss USE FLAGS in a more In depth way.
+
+
+
+₿💰💵💲Help Support the Channel by Donating Crypto💲💵💰₿
+
+
+
+Dash
+Xh9PXPEy5RoLJgFDGYCDjrbXdjshMaYerz
+
+Zcash
+t1aWtU5SBpxuUWBSwDKy4gTkT2T1ZwtFvrr
+
+Chainlink
+0x0f7f21D267d2C9dbae17fd8c20012eFEA3678F14
+
+Bitcoin Cash
+qz2st00dtu9e79zrq5wshsgaxsjw299n7c69th8ryp
+
+Etherum Classic
+0xeA641e59913960f578ad39A6B4d02051A5556BfC
+
+USD Coin
+0x0B045f743A693b225630862a3464B52fefE79FdB
+
+Subscribe to my YouTube channel http://goo.gl/9U10Wz
+and be sure to click that notification bell so you know when new videos are released. Bitcoin
+bc1qyj5p6hzqkautq4d3zgzwfllm7xv9wjeqkv857z
+
+Ethereum
+0x35B505EB5b717D11c28D163fb1412C3344c7684d
+
+Litecoin
+LQviuYVbvJs1jCSiEDwWAarycA4xsqJo7D
+
+DOGE
+D7MPGcUT4sXkGroGbs4QVQGyXqXd6QfmXF</media:description>
+   <media:community>
+    <media:starRating count="1017" average="5.00" min="1" max="5"/>
+    <media:statistics views="30251"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:MmvzAHjgd0Y</id>
+  <yt:videoId>MmvzAHjgd0Y</yt:videoId>
+  <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+  <title>9999 Gentoo Packages (bleeding edge)</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=MmvzAHjgd0Y"/>
+  <author>
+   <name>Mental Outlaw</name>
+   <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+  </author>
+  <published>2020-08-08T19:10:48+00:00</published>
+  <updated>2025-08-05T10:42:06+00:00</updated>
+  <media:group>
+   <media:title>9999 Gentoo Packages (bleeding edge)</media:title>
+   <media:content url="https://www.youtube.com/v/MmvzAHjgd0Y?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/MmvzAHjgd0Y/hqdefault.jpg" width="480" height="360"/>
+   <media:description>In this video I discuss how to install 9999 packages on Gentoo (bleeding edge packages) and how to solve a build problem for media-libs/x264 in an LTO system
+
+
+
+₿💰💵💲Help Support the Channel by Donating Crypto💲💵💰₿
+
+
+
+Dash
+Xh9PXPEy5RoLJgFDGYCDjrbXdjshMaYerz
+
+Zcash
+t1aWtU5SBpxuUWBSwDKy4gTkT2T1ZwtFvrr
+
+Chainlink
+0x0f7f21D267d2C9dbae17fd8c20012eFEA3678F14
+
+Bitcoin Cash
+qz2st00dtu9e79zrq5wshsgaxsjw299n7c69th8ryp
+
+Etherum Classic
+0xeA641e59913960f578ad39A6B4d02051A5556BfC
+
+USD Coin
+0x0B045f743A693b225630862a3464B52fefE79FdB
+
+Subscribe to my YouTube channel http://goo.gl/9U10Wz
+and be sure to click that notification bell so you know when new videos are released. Bitcoin
+bc1qyj5p6hzqkautq4d3zgzwfllm7xv9wjeqkv857z
+
+Ethereum
+0x35B505EB5b717D11c28D163fb1412C3344c7684d
+
+Litecoin
+LQviuYVbvJs1jCSiEDwWAarycA4xsqJo7D
+
+DOGE
+D7MPGcUT4sXkGroGbs4QVQGyXqXd6QfmXF</media:description>
+   <media:community>
+    <media:starRating count="337" average="5.00" min="1" max="5"/>
+    <media:statistics views="9607"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:9fGt7gD49xk</id>
+  <yt:videoId>9fGt7gD49xk</yt:videoId>
+  <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+  <title>make.conf An in Depth Analysis</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=9fGt7gD49xk"/>
+  <author>
+   <name>Mental Outlaw</name>
+   <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+  </author>
+  <published>2020-07-24T19:15:03+00:00</published>
+  <updated>2025-08-05T10:42:06+00:00</updated>
+  <media:group>
+   <media:title>make.conf An in Depth Analysis</media:title>
+   <media:content url="https://www.youtube.com/v/9fGt7gD49xk?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/9fGt7gD49xk/hqdefault.jpg" width="480" height="360"/>
+   <media:description>In this video I do a deep dive on make.conf, all the variables that I have set in my make.conf, what they all do, and why I set them.
+
+
+
+₿💰💵💲Help Support the Channel by Donating Crypto💲💵💰₿
+
+
+
+Dash
+Xh9PXPEy5RoLJgFDGYCDjrbXdjshMaYerz
+
+Zcash
+t1aWtU5SBpxuUWBSwDKy4gTkT2T1ZwtFvrr
+
+Chainlink
+0x0f7f21D267d2C9dbae17fd8c20012eFEA3678F14
+
+Bitcoin Cash
+qz2st00dtu9e79zrq5wshsgaxsjw299n7c69th8ryp
+
+Etherum Classic
+0xeA641e59913960f578ad39A6B4d02051A5556BfC
+
+USD Coin
+0x0B045f743A693b225630862a3464B52fefE79FdB
+
+Subscribe to my YouTube channel http://goo.gl/9U10Wz
+and be sure to click that notification bell so you know when new videos are released. Bitcoin
+bc1qyj5p6hzqkautq4d3zgzwfllm7xv9wjeqkv857z
+
+Ethereum
+0x35B505EB5b717D11c28D163fb1412C3344c7684d
+
+Litecoin
+LQviuYVbvJs1jCSiEDwWAarycA4xsqJo7D
+
+DOGE
+D7MPGcUT4sXkGroGbs4QVQGyXqXd6QfmXF</media:description>
+   <media:community>
+    <media:starRating count="359" average="5.00" min="1" max="5"/>
+    <media:statistics views="10785"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:8sexsoQi3nA</id>
+  <yt:videoId>8sexsoQi3nA</yt:videoId>
+  <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+  <title>Listen to that baby compile 🐧👍</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=8sexsoQi3nA"/>
+  <author>
+   <name>Mental Outlaw</name>
+   <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+  </author>
+  <published>2020-05-21T00:53:08+00:00</published>
+  <updated>2025-08-05T10:42:07+00:00</updated>
+  <media:group>
+   <media:title>Listen to that baby compile 🐧👍</media:title>
+   <media:content url="https://www.youtube.com/v/8sexsoQi3nA?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i1.ytimg.com/vi/8sexsoQi3nA/hqdefault.jpg" width="480" height="360"/>
+   <media:description>₿💰💵💲Help Support the Channel by Donating Crypto💲💵💰₿
+
+
+
+Dash
+Xh9PXPEy5RoLJgFDGYCDjrbXdjshMaYerz
+
+Zcash
+t1aWtU5SBpxuUWBSwDKy4gTkT2T1ZwtFvrr
+
+Chainlink
+0x0f7f21D267d2C9dbae17fd8c20012eFEA3678F14
+
+Bitcoin Cash
+qz2st00dtu9e79zrq5wshsgaxsjw299n7c69th8ryp
+
+Etherum Classic
+0xeA641e59913960f578ad39A6B4d02051A5556BfC
+
+USD Coin
+0x0B045f743A693b225630862a3464B52fefE79FdB Bitcoin
+bc1qyj5p6hzqkautq4d3zgzwfllm7xv9wjeqkv857z
+
+Ethereum
+0x35B505EB5b717D11c28D163fb1412C3344c7684d
+
+Litecoin
+LQviuYVbvJs1jCSiEDwWAarycA4xsqJo7D
+
+DOGE
+D7MPGcUT4sXkGroGbs4QVQGyXqXd6QfmXF</media:description>
+   <media:community>
+    <media:starRating count="649" average="5.00" min="1" max="5"/>
+    <media:statistics views="18158"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:ePUIMnIFkww</id>
+  <yt:videoId>ePUIMnIFkww</yt:videoId>
+  <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+  <title>Installing Steam on Gentoo Linux</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=ePUIMnIFkww"/>
+  <author>
+   <name>Mental Outlaw</name>
+   <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+  </author>
+  <published>2020-05-03T13:28:30+00:00</published>
+  <updated>2025-09-17T14:07:22+00:00</updated>
+  <media:group>
+   <media:title>Installing Steam on Gentoo Linux</media:title>
+   <media:content url="https://www.youtube.com/v/ePUIMnIFkww?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/ePUIMnIFkww/hqdefault.jpg" width="480" height="360"/>
+   <media:description>In this Video I show you how to install steam on Gentoo linux, by adding the steam overlay with layman.
+
+
+
+Subscribe to my YouTube channel http://goo.gl/9U10Wz
+and be sure to click that notification bell so you know when new videos are released.
+
+
+USE Changes Required by Steam
+The description for a Youtube video is limited to 5k characters so I couldn't write my use strings here, you can find them at the link below :D
+https://pastebin.com/XJSCM2a3 ₿💰💵💲Help Support the Channel by Donating Crypto💲💵💰₿
+
+
+
+Dash
+Xh9PXPEy5RoLJgFDGYCDjrbXdjshMaYerz
+
+Zcash
+t1aWtU5SBpxuUWBSwDKy4gTkT2T1ZwtFvrr
+
+Chainlink
+0x0f7f21D267d2C9dbae17fd8c20012eFEA3678F14
+
+Bitcoin Cash
+qz2st00dtu9e79zrq5wshsgaxsjw299n7c69th8ryp
+
+Etherum Classic
+0xeA641e59913960f578ad39A6B4d02051A5556BfC
+
+USD Coin
+0x0B045f743A693b225630862a3464B52fefE79FdB Bitcoin
+bc1qyj5p6hzqkautq4d3zgzwfllm7xv9wjeqkv857z
+
+Ethereum
+0x35B505EB5b717D11c28D163fb1412C3344c7684d
+
+Litecoin
+LQviuYVbvJs1jCSiEDwWAarycA4xsqJo7D
+
+DOGE
+D7MPGcUT4sXkGroGbs4QVQGyXqXd6QfmXF</media:description>
+   <media:community>
+    <media:starRating count="1138" average="5.00" min="1" max="5"/>
+    <media:statistics views="49591"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:4E-RSS-Rlws</id>
+  <yt:videoId>4E-RSS-Rlws</yt:videoId>
+  <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+  <title>Installing KeepassXC on Gentoo/Libressl</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=4E-RSS-Rlws"/>
+  <author>
+   <name>Mental Outlaw</name>
+   <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+  </author>
+  <published>2020-04-30T20:04:51+00:00</published>
+  <updated>2025-08-05T10:42:14+00:00</updated>
+  <media:group>
+   <media:title>Installing KeepassXC on Gentoo/Libressl</media:title>
+   <media:content url="https://www.youtube.com/v/4E-RSS-Rlws?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i1.ytimg.com/vi/4E-RSS-Rlws/hqdefault.jpg" width="480" height="360"/>
+   <media:description>In this Video I show you how to install keepassXC on Gentoo/Libressl
+
+
+
+Subscribe to my YouTube channel http://goo.gl/9U10Wz
+and be sure to click that notification bell so you know when new videos are released. ₿💰💵💲Help Support the Channel by Donating Crypto💲💵💰₿
+
+
+
+Dash
+Xh9PXPEy5RoLJgFDGYCDjrbXdjshMaYerz
+
+Zcash
+t1aWtU5SBpxuUWBSwDKy4gTkT2T1ZwtFvrr
+
+Chainlink
+0x0f7f21D267d2C9dbae17fd8c20012eFEA3678F14
+
+Bitcoin Cash
+qz2st00dtu9e79zrq5wshsgaxsjw299n7c69th8ryp
+
+Etherum Classic
+0xeA641e59913960f578ad39A6B4d02051A5556BfC
+
+USD Coin
+0x0B045f743A693b225630862a3464B52fefE79FdB Bitcoin
+bc1qyj5p6hzqkautq4d3zgzwfllm7xv9wjeqkv857z
+
+Ethereum
+0x35B505EB5b717D11c28D163fb1412C3344c7684d
+
+Litecoin
+LQviuYVbvJs1jCSiEDwWAarycA4xsqJo7D
+
+DOGE
+D7MPGcUT4sXkGroGbs4QVQGyXqXd6QfmXF</media:description>
+   <media:community>
+    <media:starRating count="184" average="5.00" min="1" max="5"/>
+    <media:statistics views="5541"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:BHQGboT2--Y</id>
+  <yt:videoId>BHQGboT2--Y</yt:videoId>
+  <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+  <title>Minimal X Server Configuration</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=BHQGboT2--Y"/>
+  <author>
+   <name>Mental Outlaw</name>
+   <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+  </author>
+  <published>2020-04-28T08:00:06+00:00</published>
+  <updated>2025-09-21T05:27:45+00:00</updated>
+  <media:group>
+   <media:title>Minimal X Server Configuration</media:title>
+   <media:content url="https://www.youtube.com/v/BHQGboT2--Y?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/BHQGboT2--Y/hqdefault.jpg" width="480" height="360"/>
+   <media:description>In this video I show you what packages I use in my minimal xorg configuration.  The packages I use in my X Server configuration on gentoo are below
+
+
+x11-libs/libX11
+x11-base/xorg-server
+x11-libs/libXrandr
+x11-libs/libXinerama
+x11-libs/libXft
+x11-apps/xinit
+x11-apps/xrdb
+x11-apps/mesa-progs
+x11-apps/xrandr
+x11-drivers/xf86-video-vboxvideo
+x11-misc/unclutter
+x11-misc/xclip
+x11-misc/pcmanfm
+
+
+
+
+Subscribe to my YouTube channel http://goo.gl/9U10Wz
+and be sure to click that notification bell so you know when new videos are released. ₿💰💵💲Help Support the Channel by Donating Crypto💲💵💰₿
+
+
+
+Dash
+Xh9PXPEy5RoLJgFDGYCDjrbXdjshMaYerz
+
+Zcash
+t1aWtU5SBpxuUWBSwDKy4gTkT2T1ZwtFvrr
+
+Chainlink
+0x0f7f21D267d2C9dbae17fd8c20012eFEA3678F14
+
+Bitcoin Cash
+qz2st00dtu9e79zrq5wshsgaxsjw299n7c69th8ryp
+
+Etherum Classic
+0xeA641e59913960f578ad39A6B4d02051A5556BfC
+
+USD Coin
+0x0B045f743A693b225630862a3464B52fefE79FdB Bitcoin
+bc1qyj5p6hzqkautq4d3zgzwfllm7xv9wjeqkv857z
+
+Ethereum
+0x35B505EB5b717D11c28D163fb1412C3344c7684d
+
+Litecoin
+LQviuYVbvJs1jCSiEDwWAarycA4xsqJo7D
+
+DOGE
+D7MPGcUT4sXkGroGbs4QVQGyXqXd6QfmXF</media:description>
+   <media:community>
+    <media:starRating count="1204" average="5.00" min="1" max="5"/>
+    <media:statistics views="51456"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:8BAsuZmzAPs</id>
+  <yt:videoId>8BAsuZmzAPs</yt:videoId>
+  <yt:channelId>UC7YOGHUfC1Tb6E4pudI9STA</yt:channelId>
+  <title>Installing the Latest Version of Packages on Gentoo</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=8BAsuZmzAPs"/>
+  <author>
+   <name>Mental Outlaw</name>
+   <uri>https://www.youtube.com/channel/UC7YOGHUfC1Tb6E4pudI9STA</uri>
+  </author>
+  <published>2020-04-22T21:14:42+00:00</published>
+  <updated>2025-08-05T10:42:10+00:00</updated>
+  <media:group>
+   <media:title>Installing the Latest Version of Packages on Gentoo</media:title>
+   <media:content url="https://www.youtube.com/v/8BAsuZmzAPs?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i1.ytimg.com/vi/8BAsuZmzAPs/hqdefault.jpg" width="480" height="360"/>
+   <media:description>In this video I show you how to install the latest version of any package in gentoo by adding ~amd64 after the package name and its necessary dependencies in /etc/portage/package.accept_keywords
+
+
+
+Subscribe to my YouTube channel http://goo.gl/9U10Wz
+and be sure to click that notification bell so you know when new videos are released. ₿💰💵💲Help Support the Channel by Donating Crypto💲💵💰₿
+
+
+
+Dash
+Xh9PXPEy5RoLJgFDGYCDjrbXdjshMaYerz
+
+Zcash
+t1aWtU5SBpxuUWBSwDKy4gTkT2T1ZwtFvrr
+
+Chainlink
+0x0f7f21D267d2C9dbae17fd8c20012eFEA3678F14
+
+Bitcoin Cash
+qz2st00dtu9e79zrq5wshsgaxsjw299n7c69th8ryp
+
+Etherum Classic
+0xeA641e59913960f578ad39A6B4d02051A5556BfC
+
+USD Coin
+0x0B045f743A693b225630862a3464B52fefE79FdB Bitcoin
+bc1qyj5p6hzqkautq4d3zgzwfllm7xv9wjeqkv857z
+
+Ethereum
+0x35B505EB5b717D11c28D163fb1412C3344c7684d
+
+Litecoin
+LQviuYVbvJs1jCSiEDwWAarycA4xsqJo7D
+
+DOGE
+D7MPGcUT4sXkGroGbs4QVQGyXqXd6QfmXF</media:description>
+   <media:community>
+    <media:starRating count="277" average="5.00" min="1" max="5"/>
+    <media:statistics views="10777"/>
+   </media:community>
+  </media:group>
+ </entry>
+</feed>

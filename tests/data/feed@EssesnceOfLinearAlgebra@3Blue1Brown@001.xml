@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom">
+ <link rel="self" href="http://www.youtube.com/feeds/videos.xml?playlist_id=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab"/>
+ <id>yt:playlist:PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab</id>
+ <yt:playlistId>PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab</yt:playlistId>
+ <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+ <title>Essence of linear algebra</title>
+ <author>
+  <name>3Blue1Brown</name>
+  <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+ </author>
+ <published>2016-08-04T19:58:59+00:00</published>
+ <entry>
+  <id>yt:video:fNk_zzaMoSs</id>
+  <yt:videoId>fNk_zzaMoSs</yt:videoId>
+  <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+  <title>Vectors | Chapter 1, Essence of linear algebra</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=fNk_zzaMoSs"/>
+  <author>
+   <name>3Blue1Brown</name>
+   <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+  </author>
+  <published>2016-08-06T00:05:49+00:00</published>
+  <updated>2025-06-09T19:09:13+00:00</updated>
+  <media:group>
+   <media:title>Vectors | Chapter 1, Essence of linear algebra</media:title>
+   <media:content url="https://www.youtube.com/v/fNk_zzaMoSs?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/fNk_zzaMoSs/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Beginning the linear algebra series with the basics.
+Help fund future projects: https://www.patreon.com/3blue1brown
+
+Music: https://vincerubinetti.bandcamp.com/track/grants-etude
+
+Thanks to Elo Marie Viennot and Ambros Gleixner from HTW Berlin (www.htw-berlin.de) for contributing German translations and dubbing.
+
+Thanks also to these viewers for their contributions to the subtitles
+Arabic: @Cewkins, Hazem
+Bengali: Md Rasheduzzaman
+Czech: @Chnapak
+Greek: Nikolaos Tsagkas
+Hebrew: Omer Tuchfeld
+Italian: mattiacolucci
+Spanish: Juan Carlos Largo
+Thai: own doggoV●ᴥ●V
+
+------------------
+
+3blue1brown is a channel about animating math, in all senses of the word animate.  And you know the drill with YouTube, if you want to stay posted about new videos, subscribe, and click the bell to receive notifications (if you're into that).
+
+If you are new to this channel and want to see more, a good place to start is this playlist: https://goo.gl/WmnCQZ
+
+Various social media stuffs:
+Website: https://www.3blue1brown.com
+Twitter: https://twitter.com/3Blue1Brown
+Patreon: https://patreon.com/3blue1brown
+Facebook: https://www.facebook.com/3blue1brown
+Reddit: https://www.reddit.com/r/3Blue1Brown</media:description>
+   <media:community>
+    <media:starRating count="202364" average="5.00" min="1" max="5"/>
+    <media:statistics views="10459269"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:k7RM-ot2NWY</id>
+  <yt:videoId>k7RM-ot2NWY</yt:videoId>
+  <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+  <title>Linear combinations, span, and basis vectors | Chapter 2, Essence of linear algebra</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=k7RM-ot2NWY"/>
+  <author>
+   <name>3Blue1Brown</name>
+   <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+  </author>
+  <published>2016-08-06T23:49:28+00:00</published>
+  <updated>2025-09-20T23:45:54+00:00</updated>
+  <media:group>
+   <media:title>Linear combinations, span, and basis vectors | Chapter 2, Essence of linear algebra</media:title>
+   <media:content url="https://www.youtube.com/v/k7RM-ot2NWY?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i4.ytimg.com/vi/k7RM-ot2NWY/hqdefault.jpg" width="480" height="360"/>
+   <media:description>The fundamental concepts of span, linear combinations, linear dependence, and bases.
+Help fund future projects: https://www.patreon.com/3blue1brown
+
+Thanks to Elo Marie Viennot and Ambros Gleixner from HTW Berlin (www.htw-berlin.de) for contributing German translations and dubbing.
+
+Thanks to these viewers for their contributions to translations
+Arabic: @Cewkins, Hazem
+Hebrew: Omer Tuchfeld
+Spanish: Juan Carlos Largo
+Vietnamese: @ngvutuan2811
+
+------------------
+
+3blue1brown is a channel about animating math, in all senses of the word animate.  And you know the drill with YouTube, if you want to stay posted about new videos, subscribe, and click the bell to receive notifications (if you're into that).
+
+If you are new to this channel and want to see more, a good place to start is this playlist: https://goo.gl/WmnCQZ
+
+Various social media stuffs:
+Website: https://www.3blue1brown.com
+Twitter: https://twitter.com/3Blue1Brown
+Patreon: https://patreon.com/3blue1brown
+Facebook: https://www.facebook.com/3blue1brown
+Reddit: https://www.reddit.com/r/3Blue1Brown</media:description>
+   <media:community>
+    <media:starRating count="125301" average="5.00" min="1" max="5"/>
+    <media:statistics views="6440220"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:kYB8IZa5AuE</id>
+  <yt:videoId>kYB8IZa5AuE</yt:videoId>
+  <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+  <title>Linear transformations and matrices | Chapter 3, Essence of linear algebra</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=kYB8IZa5AuE"/>
+  <author>
+   <name>3Blue1Brown</name>
+   <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+  </author>
+  <published>2016-08-07T21:39:19+00:00</published>
+  <updated>2025-09-05T06:31:44+00:00</updated>
+  <media:group>
+   <media:title>Linear transformations and matrices | Chapter 3, Essence of linear algebra</media:title>
+   <media:content url="https://www.youtube.com/v/kYB8IZa5AuE?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i4.ytimg.com/vi/kYB8IZa5AuE/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Quite possibly the most important idea for understanding linear algebra.
+Help fund future projects: https://www.patreon.com/3blue1brown
+An equally valuable form of support is to simply share some of the videos.
+Home page: https://www.3blue1brown.com
+
+Full series: http://3b1b.co/eola
+
+Future series like this are funded by the community, through Patreon, where supporters get early access as the series is being produced.
+http://3b1b.co/support
+
+Thanks to these viewers for their contributions to translations
+Hebrew: Omer Tuchfeld
+Spanish: Juan Carlos Largo
+Vietnamese: @ngvutuan2811
+
+------------------
+
+3blue1brown is a channel about animating math, in all senses of the word animate.  And you know the drill with YouTube, if you want to stay posted about new videos, subscribe, and click the bell to receive notifications (if you're into that).
+
+If you are new to this channel and want to see more, a good place to start is this playlist: https://goo.gl/WmnCQZ
+
+Various social media stuffs:
+Website: https://www.3blue1brown.com
+Twitter: https://twitter.com/3Blue1Brown
+Patreon: https://patreon.com/3blue1brown
+Facebook: https://www.facebook.com/3blue1brown
+Reddit: https://www.reddit.com/r/3Blue1Brown</media:description>
+   <media:community>
+    <media:starRating count="131112" average="5.00" min="1" max="5"/>
+    <media:statistics views="6170599"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:XkY2DOUCWMU</id>
+  <yt:videoId>XkY2DOUCWMU</yt:videoId>
+  <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+  <title>Matrix multiplication as composition | Chapter 4, Essence of linear algebra</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=XkY2DOUCWMU"/>
+  <author>
+   <name>3Blue1Brown</name>
+   <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+  </author>
+  <published>2016-08-08T22:20:43+00:00</published>
+  <updated>2025-09-09T07:04:16+00:00</updated>
+  <media:group>
+   <media:title>Matrix multiplication as composition | Chapter 4, Essence of linear algebra</media:title>
+   <media:content url="https://www.youtube.com/v/XkY2DOUCWMU?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i1.ytimg.com/vi/XkY2DOUCWMU/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Multiplying two matrices represents applying one transformation after another.
+Help fund future projects: https://www.patreon.com/3blue1brown
+An equally valuable form of support is to simply share some of the videos.
+Home page: https://www.3blue1brown.com/
+
+Full series: http://3b1b.co/eola
+
+Future series like this are funded by the community, through Patreon, where supporters get early access as the series is being produced.
+http://3b1b.co/support
+
+Thanks to these viewers for their contributions to translations
+Hebrew: Omer Tuchfeld
+Spanish: Juan Carlos Largo
+Vietnamese: @ngvutuan2811
+
+------------------
+
+3blue1brown is a channel about animating math, in all senses of the word animate.  And you know the drill with YouTube, if you want to stay posted about new videos, subscribe, and click the bell to receive notifications (if you're into that).
+
+If you are new to this channel and want to see more, a good place to start is this playlist: https://goo.gl/WmnCQZ
+
+Various social media stuffs:
+Website: https://www.3blue1brown.com
+Twitter: https://twitter.com/3Blue1Brown
+Patreon: https://patreon.com/3blue1brown
+Facebook: https://www.facebook.com/3blue1brown
+Reddit: https://www.reddit.com/r/3Blue1Brown</media:description>
+   <media:community>
+    <media:starRating count="79129" average="5.00" min="1" max="5"/>
+    <media:statistics views="3834761"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:rHLEWRxRGiM</id>
+  <yt:videoId>rHLEWRxRGiM</yt:videoId>
+  <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+  <title>Three-dimensional linear transformations | Chapter 5, Essence of linear algebra</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=rHLEWRxRGiM"/>
+  <author>
+   <name>3Blue1Brown</name>
+   <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+  </author>
+  <published>2016-08-09T22:01:39+00:00</published>
+  <updated>2025-09-22T06:25:07+00:00</updated>
+  <media:group>
+   <media:title>Three-dimensional linear transformations | Chapter 5, Essence of linear algebra</media:title>
+   <media:content url="https://www.youtube.com/v/rHLEWRxRGiM?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/rHLEWRxRGiM/hqdefault.jpg" width="480" height="360"/>
+   <media:description>What do 3d linear transformations look like?
+Help fund future projects: https://www.patreon.com/3blue1brown
+An equally valuable form of support is to simply share some of the videos.
+Home page: https://www.3blue1brown.com/
+
+Full series: http://3b1b.co/eola
+
+Future series like this are funded by the community, through Patreon, where supporters get early access as the series is being produced.
+http://3b1b.co/support
+
+Thanks to these viewers for their contributions to translations
+Hebrew: Omer Tuchfeld
+
+------------------
+
+3blue1brown is a channel about animating math, in all senses of the word animate.  And you know the drill with YouTube, if you want to stay posted about new videos, subscribe, and click the bell to receive notifications (if you're into that).
+
+If you are new to this channel and want to see more, a good place to start is this playlist: https://goo.gl/WmnCQZ
+
+Various social media stuffs:
+Website: https://www.3blue1brown.com
+Twitter: https://twitter.com/3Blue1Brown
+Patreon: https://patreon.com/3blue1brown
+Facebook: https://www.facebook.com/3blue1brown
+Reddit: https://www.reddit.com/r/3Blue1Brown</media:description>
+   <media:community>
+    <media:starRating count="41774" average="5.00" min="1" max="5"/>
+    <media:statistics views="2367183"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:Ip3X9LOh2dk</id>
+  <yt:videoId>Ip3X9LOh2dk</yt:videoId>
+  <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+  <title>The determinant | Chapter 6, Essence of linear algebra</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=Ip3X9LOh2dk"/>
+  <author>
+   <name>3Blue1Brown</name>
+   <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+  </author>
+  <published>2016-08-10T22:31:18+00:00</published>
+  <updated>2025-09-22T06:31:39+00:00</updated>
+  <media:group>
+   <media:title>The determinant | Chapter 6, Essence of linear algebra</media:title>
+   <media:content url="https://www.youtube.com/v/Ip3X9LOh2dk?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/Ip3X9LOh2dk/hqdefault.jpg" width="480" height="360"/>
+   <media:description>The determinant measures how much volumes change during a transformation.
+Help fund future projects: https://www.patreon.com/3blue1brown
+An equally valuable form of support is to simply share some of the videos.
+Home page: https://www.3blue1brown.com/
+
+
+Full series: http://3b1b.co/eola
+
+Future series like this are funded by the community, through Patreon, where supporters get early access as the series is being produced.
+http://3b1b.co/support
+
+Thanks to these viewers for their contributions to translations
+Hebrew: Omer Tuchfeld
+Vietnamese: @ngvutuan2811
+
+------------------
+
+3blue1brown is a channel about animating math, in all senses of the word animate.  And you know the drill with YouTube, if you want to stay posted about new videos, subscribe, and click the bell to receive notifications (if you're into that).
+
+If you are new to this channel and want to see more, a good place to start is this playlist: https://goo.gl/WmnCQZ
+
+Various social media stuffs:
+Website: https://www.3blue1brown.com
+Twitter: https://twitter.com/3Blue1Brown
+Patreon: https://patreon.com/3blue1brown
+Facebook: https://www.facebook.com/3blue1brown
+Reddit: https://www.reddit.com/r/3Blue1Brown</media:description>
+   <media:community>
+    <media:starRating count="96565" average="5.00" min="1" max="5"/>
+    <media:statistics views="4396174"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:uQhTuRlWMxw</id>
+  <yt:videoId>uQhTuRlWMxw</yt:videoId>
+  <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+  <title>Inverse matrices, column space and null space | Chapter 7, Essence of linear algebra</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=uQhTuRlWMxw"/>
+  <author>
+   <name>3Blue1Brown</name>
+   <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+  </author>
+  <published>2016-08-15T22:00:22+00:00</published>
+  <updated>2025-09-22T07:05:20+00:00</updated>
+  <media:group>
+   <media:title>Inverse matrices, column space and null space | Chapter 7, Essence of linear algebra</media:title>
+   <media:content url="https://www.youtube.com/v/uQhTuRlWMxw?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/uQhTuRlWMxw/hqdefault.jpg" width="480" height="360"/>
+   <media:description>How to think about linear systems of equations geometrically.
+Help fund future projects: https://www.patreon.com/3blue1brown
+An equally valuable form of support is to simply share some of the videos.
+Home page: https://www.3blue1brown.com/
+
+Full series: http://3b1b.co/eola
+
+Future series like this are funded by the community, through Patreon, where supporters get early access as the series is being produced.
+http://3b1b.co/support
+
+Thanks to these viewers for their contributions to translations
+Hebrew: Omer Tuchfeld
+
+------------------
+
+3blue1brown is a channel about animating math, in all senses of the word animate.  And you know the drill with YouTube, if you want to stay posted about new videos, subscribe, and click the bell to receive notifications (if you're into that).
+
+If you are new to this channel and want to see more, a good place to start is this playlist: https://goo.gl/WmnCQZ
+
+Various social media stuffs:
+Website: https://www.3blue1brown.com
+Twitter: https://twitter.com/3Blue1Brown
+Patreon: https://patreon.com/3blue1brown
+Facebook: https://www.facebook.com/3blue1brown
+Reddit: https://www.reddit.com/r/3Blue1Brown</media:description>
+   <media:community>
+    <media:starRating count="69756" average="5.00" min="1" max="5"/>
+    <media:statistics views="3374091"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:v8VSDg_WQlA</id>
+  <yt:videoId>v8VSDg_WQlA</yt:videoId>
+  <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+  <title>Nonsquare matrices as transformations between dimensions | Chapter 8, Essence of linear algebra</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=v8VSDg_WQlA"/>
+  <author>
+   <name>3Blue1Brown</name>
+   <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+  </author>
+  <published>2016-08-16T21:59:23+00:00</published>
+  <updated>2025-09-22T07:22:20+00:00</updated>
+  <media:group>
+   <media:title>Nonsquare matrices as transformations between dimensions | Chapter 8, Essence of linear algebra</media:title>
+   <media:content url="https://www.youtube.com/v/v8VSDg_WQlA?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/v8VSDg_WQlA/hqdefault.jpg" width="480" height="360"/>
+   <media:description>A brief footnote on the geometric interpretation of non-square matrices.
+Help fund future projects: https://www.patreon.com/3blue1brown
+An equally valuable form of support is to simply share some of the videos.
+Home page: https://www.3blue1brown.com/
+
+
+Full series: http://3b1b.co/eola
+
+Future series like this are funded by the community, through Patreon, where supporters get early access as the series is being produced.
+http://3b1b.co/support
+
+Thanks to these viewers for their contributions to translations
+Hebrew: Omer Tuchfeld
+Vietnamese: @ngvutuan2811
+
+------------------
+
+3blue1brown is a channel about animating math, in all senses of the word animate.  And you know the drill with YouTube, if you want to stay posted about new videos, subscribe, and click the bell to receive notifications (if you're into that).
+
+If you are new to this channel and want to see more, a good place to start is this playlist: https://goo.gl/WmnCQZ
+
+Various social media stuffs:
+Website: https://www.3blue1brown.com
+Twitter: https://twitter.com/3Blue1Brown
+Patreon: https://patreon.com/3blue1brown
+Facebook: https://www.facebook.com/3blue1brown
+Reddit: https://www.reddit.com/r/3Blue1Brown</media:description>
+   <media:community>
+    <media:starRating count="33154" average="5.00" min="1" max="5"/>
+    <media:statistics views="1826787"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:LyGKycYT2v0</id>
+  <yt:videoId>LyGKycYT2v0</yt:videoId>
+  <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+  <title>Dot products and duality | Chapter 9, Essence of linear algebra</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=LyGKycYT2v0"/>
+  <author>
+   <name>3Blue1Brown</name>
+   <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+  </author>
+  <published>2016-08-24T19:20:58+00:00</published>
+  <updated>2025-09-16T07:58:42+00:00</updated>
+  <media:group>
+   <media:title>Dot products and duality | Chapter 9, Essence of linear algebra</media:title>
+   <media:content url="https://www.youtube.com/v/LyGKycYT2v0?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i1.ytimg.com/vi/LyGKycYT2v0/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Why the formula for dot products matches their geometric intuition.
+Help fund future projects: https://www.patreon.com/3blue1brown
+An equally valuable form of support is to simply share some of the videos.
+Home page: https://www.3blue1brown.com/
+
+Dot products are a nice geometric tool for understanding projection.  But now that we know about linear transformations, we can get a deeper feel for what's going on with the dot product, and the connection between its numerical computation and its geometric interpretation.
+
+Full series: http://3b1b.co/eola
+
+Future series like this are funded by the community, through Patreon, where supporters get early access as the series is being produced.
+http://3b1b.co/support
+
+Thanks to these viewers for their contributions to translations
+Hebrew: Omer Tuchfeld
+Vietnamese: @ngvutuan2811
+
+------------------
+
+3blue1brown is a channel about animating math, in all senses of the word animate.  And you know the drill with YouTube, if you want to stay posted about new videos, subscribe, and click the bell to receive notifications (if you're into that).
+
+If you are new to this channel and want to see more, a good place to start is this playlist: https://goo.gl/WmnCQZ
+
+Various social media stuffs:
+Website: https://www.3blue1brown.com
+Twitter: https://twitter.com/3Blue1Brown
+Patreon: https://patreon.com/3blue1brown
+Facebook: https://www.facebook.com/3blue1brown
+Reddit: https://www.reddit.com/r/3Blue1Brown</media:description>
+   <media:community>
+    <media:starRating count="56401" average="5.00" min="1" max="5"/>
+    <media:statistics views="2957015"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:eu6i7WJeinw</id>
+  <yt:videoId>eu6i7WJeinw</yt:videoId>
+  <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+  <title>Cross products | Chapter 10, Essence of linear algebra</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=eu6i7WJeinw"/>
+  <author>
+   <name>3Blue1Brown</name>
+   <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+  </author>
+  <published>2016-09-01T03:54:15+00:00</published>
+  <updated>2025-10-06T07:43:59+00:00</updated>
+  <media:group>
+   <media:title>Cross products | Chapter 10, Essence of linear algebra</media:title>
+   <media:content url="https://www.youtube.com/v/eu6i7WJeinw?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/eu6i7WJeinw/hqdefault.jpg" width="480" height="360"/>
+   <media:description>This covers the main geometric intuition behind the 2d and 3d cross products.
+Help fund future projects: https://www.patreon.com/3blue1brown
+An equally valuable form of support is to simply share some of the videos.
+Home page: https://www.3blue1brown.com/
+
+*Note, in all the computations here, I list the coordinates of the vectors as columns of a matrix, but many textbooks put them in the rows of a matrix instead.  It makes no difference for the result, since the determinant is unchanged after a transpose, but given how I've framed most of this series I think it is more intuitive to go with a column-centric approach.
+
+Full series: http://3b1b.co/eola
+
+Future series like this are funded by the community, through Patreon, where supporters get early access as the series is being produced.
+http://3b1b.co/support
+
+Thanks to these viewers for their contributions to translations
+Hebrew: Omer Tuchfeld
+Vietnamese: @ngvutuan2811
+
+------------------
+
+3blue1brown is a channel about animating math, in all senses of the word animate.  And you know the drill with YouTube, if you want to stay posted about new videos, subscribe, and click the bell to receive notifications (if you're into that).
+
+If you are new to this channel and want to see more, a good place to start is this playlist: https://goo.gl/WmnCQZ
+
+Various social media stuffs:
+Website: https://www.3blue1brown.com
+Twitter: https://twitter.com/3Blue1Brown
+Patreon: https://patreon.com/3blue1brown
+Facebook: https://www.facebook.com/3blue1brown
+Reddit: https://www.reddit.com/r/3Blue1Brown</media:description>
+   <media:community>
+    <media:starRating count="38087" average="5.00" min="1" max="5"/>
+    <media:statistics views="2161900"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:BaM7OCEm3G0</id>
+  <yt:videoId>BaM7OCEm3G0</yt:videoId>
+  <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+  <title>Cross products in the light of linear transformations | Chapter 11, Essence of linear algebra</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=BaM7OCEm3G0"/>
+  <author>
+   <name>3Blue1Brown</name>
+   <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+  </author>
+  <published>2016-09-01T03:54:15+00:00</published>
+  <updated>2025-09-18T07:26:31+00:00</updated>
+  <media:group>
+   <media:title>Cross products in the light of linear transformations | Chapter 11, Essence of linear algebra</media:title>
+   <media:content url="https://www.youtube.com/v/BaM7OCEm3G0?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/BaM7OCEm3G0/hqdefault.jpg" width="480" height="360"/>
+   <media:description>Why the formula for cross products matches the geometric intuition.
+Help fund future projects: https://www.patreon.com/3blue1brown
+An equally valuable form of support is to simply share some of the videos.
+Home page: https://www.3blue1brown.com/
+
+For anyone who wants to understand the cross-product more deeply, this video shows how it relates to a certain linear transformation via duality.  This perspective gives a very elegant explanation of why the traditional computation of a dot product corresponds to its geometric interpretation.
+
+Minor error at 1:44, the third line of the matrix should read &quot;v1 * w2 - w1 * v2&quot;
+
+*Note, in all the computations here, I list the coordinates of the vectors as columns of a matrix, but many textbooks put them in the rows of a matrix instead.  It makes no difference for the result since the determinant is unchanged after a transpose, but given how I've framed most of this series I think it is more intuitive to go with a column-centric approach.
+
+Full series: http://3b1b.co/eola
+
+Future series like this are funded by the community, through Patreon, where supporters get early access as the series is being produced.
+http://3b1b.co/support
+
+Thanks to these viewers for their contributions to translations
+Hebrew: Omer Tuchfeld
+Vietnamese: @ngvutuan2811
+
+------------------
+
+3blue1brown is a channel about animating math, in all senses of the word animate.  And you know the drill with YouTube, if you want to stay posted about new videos, subscribe, and click the bell to receive notifications (if you're into that).
+
+If you are new to this channel and want to see more, a good place to start is this playlist: https://goo.gl/WmnCQZ
+
+Various social media stuffs:
+Website: https://www.3blue1brown.com
+Twitter: https://twitter.com/3Blue1Brown
+Patreon: https://patreon.com/3blue1brown
+Facebook: https://www.facebook.com/3blue1brown
+Reddit: https://www.reddit.com/r/3Blue1Brown</media:description>
+   <media:community>
+    <media:starRating count="25530" average="5.00" min="1" max="5"/>
+    <media:statistics views="1409560"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:jBsC34PxzoM</id>
+  <yt:videoId>jBsC34PxzoM</yt:videoId>
+  <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+  <title>Cramer's rule, explained geometrically | Chapter 12, Essence of linear algebra</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=jBsC34PxzoM"/>
+  <author>
+   <name>3Blue1Brown</name>
+   <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+  </author>
+  <published>2019-03-17T04:35:22+00:00</published>
+  <updated>2025-09-13T06:11:54+00:00</updated>
+  <media:group>
+   <media:title>Cramer's rule, explained geometrically | Chapter 12, Essence of linear algebra</media:title>
+   <media:content url="https://www.youtube.com/v/jBsC34PxzoM?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i3.ytimg.com/vi/jBsC34PxzoM/hqdefault.jpg" width="480" height="360"/>
+   <media:description>This rule seems random to many students, but it has a beautiful reason for being true.
+Help fund future projects: https://www.patreon.com/3blue1brown
+An equally valuable form of support is to simply share some of the videos.
+Home page: https://www.3blue1brown.com/
+
+Thanks to these viewers for their contributions to translations
+Hebrew: Omer Tuchfeld
+
+----
+
+If you want to contribute translated subtitles or to help review those that have already been made by others and need approval, you can click the gear icon in the video and go to subtitles/cc, then &quot;add subtitles/cc&quot;.  I really appreciate those who do this, as it helps make the lessons accessible to more people.
+
+Music by Vincent Rubinetti.
+Download the music on Bandcamp:
+https://vincerubinetti.bandcamp.com/album/the-music-of-3blue1brown
+
+Stream the music on Spotify:
+https://open.spotify.com/album/1dVyjwS8FBqXhRunaG5W5u
+
+------------------
+
+3blue1brown is a channel about animating math, in all senses of the word animate.  And you know the drill with YouTube, if you want to stay posted on new videos, subscribe: http://3b1b.co/subscribe
+
+Various social media stuffs:
+Website: https://www.3blue1brown.com
+Twitter: https://twitter.com/3blue1brown
+Reddit: https://www.reddit.com/r/3blue1brown
+Instagram: https://www.instagram.com/3blue1brown_animations/
+Patreon: https://patreon.com/3blue1brown
+Facebook: https://www.facebook.com/3blue1brown</media:description>
+   <media:community>
+    <media:starRating count="29377" average="5.00" min="1" max="5"/>
+    <media:statistics views="1367795"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:P2LTAUO1TdA</id>
+  <yt:videoId>P2LTAUO1TdA</yt:videoId>
+  <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+  <title>Change of basis | Chapter 13, Essence of linear algebra</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=P2LTAUO1TdA"/>
+  <author>
+   <name>3Blue1Brown</name>
+   <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+  </author>
+  <published>2016-09-11T17:56:20+00:00</published>
+  <updated>2025-08-11T07:12:47+00:00</updated>
+  <media:group>
+   <media:title>Change of basis | Chapter 13, Essence of linear algebra</media:title>
+   <media:content url="https://www.youtube.com/v/P2LTAUO1TdA?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i1.ytimg.com/vi/P2LTAUO1TdA/hqdefault.jpg" width="480" height="360"/>
+   <media:description>How do you translate back and forth between coordinate systems that use different basis vectors?
+Help fund future projects: https://www.patreon.com/3blue1brown
+An equally valuable form of support is to simply share some of the videos.
+Home page: https://www.3blue1brown.com/
+
+Future series like this are funded by the community, through Patreon, where supporters get early access as the series is being produced.
+http://3b1b.co/support
+
+Thanks to these viewers for their contributions to translations
+Vietnamese: @ngvutuan2811</media:description>
+   <media:community>
+    <media:starRating count="42937" average="5.00" min="1" max="5"/>
+    <media:statistics views="2258795"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:PFDu9oVAE-g</id>
+  <yt:videoId>PFDu9oVAE-g</yt:videoId>
+  <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+  <title>Eigenvectors and eigenvalues | Chapter 14, Essence of linear algebra</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=PFDu9oVAE-g"/>
+  <author>
+   <name>3Blue1Brown</name>
+   <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+  </author>
+  <published>2016-09-15T18:22:14+00:00</published>
+  <updated>2025-06-09T03:12:59+00:00</updated>
+  <media:group>
+   <media:title>Eigenvectors and eigenvalues | Chapter 14, Essence of linear algebra</media:title>
+   <media:content url="https://www.youtube.com/v/PFDu9oVAE-g?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i1.ytimg.com/vi/PFDu9oVAE-g/hqdefault.jpg" width="480" height="360"/>
+   <media:description>A visual understanding of eigenvectors, eigenvalues, and the usefulness of an eigenbasis.
+Help fund future projects: https://www.patreon.com/3blue1brown
+An equally valuable form of support is to simply share some of the videos.
+Home page: https://www.3blue1brown.com
+
+Full series: https://3b1b.co/eola
+
+Future series like this are funded by the community, through Patreon, where supporters get early access as the series is being produced.
+http://3b1b.co/support
+
+A solution to the puzzle at the end:
+https://www.dropbox.com/s/86yddvprfuaafju/Eigenvalue%20puzzle%20solution.pdf?dl=0
+
+Typo: At 12:27, &quot;more that a line full&quot; should be &quot;more than a line full&quot;.
+
+Thanks to these viewers for their contributions to translations
+Hebrew: Omer Tuchfeld
+
+------------------
+
+3blue1brown is a channel about animating math, in all senses of the word animate.
+
+Various social media stuffs:
+Website: https://www.3blue1brown.com
+Twitter: https://twitter.com/3Blue1Brown
+Patreon: https://patreon.com/3blue1brown
+Facebook: https://www.facebook.com/3blue1brown
+Reddit: https://www.reddit.com/r/3Blue1Brown</media:description>
+   <media:community>
+    <media:starRating count="111122" average="5.00" min="1" max="5"/>
+    <media:statistics views="5633619"/>
+   </media:community>
+  </media:group>
+ </entry>
+ <entry>
+  <id>yt:video:e50Bj7jn9IQ</id>
+  <yt:videoId>e50Bj7jn9IQ</yt:videoId>
+  <yt:channelId>UCYO_jab_esuFRV4b17AJtAw</yt:channelId>
+  <title>A quick trick for computing eigenvalues | Chapter 15, Essence of linear algebra</title>
+  <link rel="alternate" href="https://www.youtube.com/watch?v=e50Bj7jn9IQ"/>
+  <author>
+   <name>3Blue1Brown</name>
+   <uri>https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw</uri>
+  </author>
+  <published>2021-05-07T21:39:22+00:00</published>
+  <updated>2025-07-30T14:19:04+00:00</updated>
+  <media:group>
+   <media:title>A quick trick for computing eigenvalues | Chapter 15, Essence of linear algebra</media:title>
+   <media:content url="https://www.youtube.com/v/e50Bj7jn9IQ?version=3" type="application/x-shockwave-flash" width="640" height="390"/>
+   <media:thumbnail url="https://i2.ytimg.com/vi/e50Bj7jn9IQ/hqdefault.jpg" width="480" height="360"/>
+   <media:description>How to write the eigenvalues of a 2x2 matrix just by looking at it.
+Need a refresher on eigenvalues?  https://youtu.be/PFDu9oVAE-g
+Thanks to Tim for the jingle: https://www.youtube.com/acapellascience
+Help fund future projects: https://www.patreon.com/3blue1brown​
+An equally valuable form of support is to simply share the videos.
+Special thanks to these supporters: https://3b1b.co/quick-eigen-thanks
+
+Lockdown math lecture talking about the mean product formula:
+https://youtu.be/MHXO86wKeDY
+
+Timestamps:
+0:00 - Background
+4:53 - Examples
+10:24 - Relation to the characteristic polynomial
+12:00 - Last thoughts
+
+------------------
+
+These animations are largely made using a custom python library, manim.  See the FAQ comments here:
+https://www.3blue1brown.com/faq#manim
+https://github.com/3b1b/manim
+https://github.com/ManimCommunity/manim/
+
+You can find code for specific videos and projects here:
+https://github.com/3b1b/videos/
+
+Music by Vincent Rubinetti.
+https://www.vincentrubinetti.com/
+
+Download the music on Bandcamp:
+https://vincerubinetti.bandcamp.com/album/the-music-of-3blue1brown
+
+Stream the music on Spotify:
+https://open.spotify.com/album/1dVyjwS8FBqXhRunaG5W5u
+
+------------------
+
+3blue1brown is a channel about animating math, in all senses of the word animate.  And you know the drill with YouTube, if you want to stay posted on new videos, subscribe: http://3b1b.co/subscribe
+
+Various social media stuffs:
+Website: https://www.3blue1brown.com
+Twitter: https://twitter.com/3blue1brown
+Reddit: https://www.reddit.com/r/3blue1brown
+Instagram: https://www.instagram.com/3blue1brown_animations/
+Patreon: https://patreon.com/3blue1brown
+Facebook: https://www.facebook.com/3blue1brown</media:description>
+   <media:community>
+    <media:starRating count="32168" average="5.00" min="1" max="5"/>
+    <media:statistics views="1199668"/>
+   </media:community>
+  </media:group>
+ </entry>
+</feed>
