@@ -11,7 +11,10 @@ def is_video(url: str) -> bool:
     if not is_youtube(url):
         return False
     parsed_url = urlparse(url)
-    if parsed_url.path in ('/watch', '/shorts/', '/embed/'):
+    for path in ('/shorts/', '/embed/'):
+        if parsed_url.path.startswith(path):
+            return True
+    if parsed_url.path == '/watch' and 'v' in parse_qs(parsed_url.query):
         return True
     return parsed_url.netloc == 'youtu.be'
 
