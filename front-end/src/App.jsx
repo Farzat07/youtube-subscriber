@@ -13,6 +13,12 @@ function App() {
   const [error, setError] = useState(null);
   const [selectedChannelId, setSelectedChannelId] = useState('');
   const [expandedDescriptions, setExpandedDescriptions] = useState({});
+  const [showAddSubscription, setShowAddSubscription] = useState(false);
+  const [subscriptionUrl, setSubscriptionUrl] = useState('');
+  const [timeBetweenFetches, setTimeBetweenFetches] = useState(300); // Default 5 minutes
+  const [addingSubscription, setAddingSubscription] = useState(false);
+  const [subscriptionError, setSubscriptionError] = useState(null);
+  const [subscriptionSuccess, setSubscriptionSuccess] = useState(null);
 
   const fetchChannels = async () => {
     try {
@@ -138,6 +144,59 @@ function App() {
     }
   };
 
+  const handleAddSubscription = async (e) => {
+    e.preventDefault();
+
+    if (!subscriptionUrl.trim()) {
+      setSubscriptionError('Please enter a YouTube channel/playlist URL');
+      return;
+    }
+
+    try {
+      setAddingSubscription(true);
+      setSubscriptionError(null);
+      setSubscriptionSuccess(null);
+
+      const formData = new FormData();
+      formData.append('url', subscriptionUrl.trim());
+      formData.append('time_between_fetches', timeBetweenFetches.toString());
+
+      const response = await axios.post(`${API_BASE_URL}/add-sub/`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      if (response.data) {
+        setSubscriptionSuccess('Subscription added successfully!');
+        setSubscriptionUrl('');
+        setTimeBetweenFetches(300);
+        setShowAddSubscription(false);
+
+        // Refresh the subs list to include the new subscription
+        fetchChannels();
+      } else {
+        throw new Error(response.data.error || 'Failed to add subscription');
+      }
+    } catch (err) {
+      console.error('Error adding subscription:', err);
+      setSubscriptionError(
+        err.response?.data?.error ||
+        err.message ||
+        'Failed to add subscription. Please check the URL and try again.'
+      );
+    } finally {
+      setAddingSubscription(false);
+    }
+  };
+
+  const resetSubscriptionForm = () => {
+    setSubscriptionUrl('');
+    setTimeBetweenFetches(300);
+    setSubscriptionError(null);
+    setSubscriptionSuccess(null);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -186,6 +245,75 @@ function App() {
                   <span> • Last updated: {formatRelativeTime(channels.find(ch => ch.id === selectedChannelId).last_video_update)}</span>
                 )}
               </p>
+            </div>
+          )}
+        </div>
+        <div className="subscription-section">
+          <button
+            onClick={() => {
+              setShowAddSubscription(!showAddSubscription);
+              resetSubscriptionForm();
+            }}
+            className="add-subscription-toggle"
+          >
+            {showAddSubscription ? '✕ Cancel' : '+ Add Subscription'}
+          </button>
+
+          {showAddSubscription && (
+            <div className="subscription-form-container">
+              <form onSubmit={handleAddSubscription} className="subscription-form">
+                <h3>Add New Subscription</h3>
+
+                <div className="form-group">
+                  <label htmlFor="subscription-url">YouTube Channel URL:</label>
+                  <input
+                    id="subscription-url"
+                    type="url"
+                    value={subscriptionUrl}
+                    onChange={(e) => setSubscriptionUrl(e.target.value)}
+                    placeholder="https://www.youtube.com/channel/UCxxxxxxxxxxxxxxxxxx"
+                    className="subscription-input"
+                    disabled={addingSubscription}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="time-between-fetches">
+                    Fetch Interval (seconds):
+                  </label>
+                  <input
+                    id="time-between-fetches"
+                    type="number"
+                    value={timeBetweenFetches}
+                    onChange={(e) => setTimeBetweenFetches(parseInt(e.target.value) || 300)}
+                    min="60"
+                    max="86400"
+                    className="subscription-input"
+                    disabled={addingSubscription}
+                  />
+                  <small className="interval-help">
+                    How often to check for new videos (default: 300s = 5 minutes)
+                  </small>
+                </div>
+
+                {subscriptionError && (
+                  <div className="subscription-error">{subscriptionError}</div>
+                )}
+
+                {subscriptionSuccess && (
+                  <div className="subscription-success">{subscriptionSuccess}</div>
+                )}
+
+                <div className="form-actions">
+                  <button
+                    type="submit"
+                    className="submit-subscription"
+                    disabled={addingSubscription || !subscriptionUrl.trim()}
+                  >
+                    {addingSubscription ? 'Adding...' : 'Add Subscription'}
+                  </button>
+                </div>
+              </form>
             </div>
           )}
         </div>
