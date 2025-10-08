@@ -1,13 +1,16 @@
 from components.subscriptions.main import Subscription
 from components.subscriptions.typing import SubsDict
 from components.videos import VideoTuple
-from components.ytdlp import obtain_vid_info
+from components.extractor.obtain_vid_info import obtain_vid_duration
 
 from pymongo.collection import Collection
 
 def analyse_video(vid_tuple: VideoTuple) -> VideoTuple:
-    info = obtain_vid_info(vid_tuple.link)
-    return vid_tuple._replace(analysed=True, duration_string=info["duration_string"])
+    try:
+        duration = obtain_vid_duration(vid_tuple.link)
+    except:
+        duration = -2
+    return vid_tuple._replace(analysed=True, duration=duration)
 
 def analyse_subscription(sub: Subscription) -> bool:
     updated = False

@@ -12,7 +12,7 @@ class VideoTuple(NamedTuple):
     thumbnail: str
     summary: str
     analysed: bool = False
-    duration_string: str = ""
+    duration: int = -1
 
     @classmethod
     def from_rss_entry(cls, entry: Any) -> Self:
