@@ -1,3 +1,4 @@
+beautifulsoup4==4.14.2
 blinker==1.9.0
 certifi==2025.8.3
 charset-normalizer==3.4.3
@@ -23,6 +24,7 @@ pytz==2025.2
 schedule==1.2.2
 sentinels==1.1.1
 sgmllib3k==1.0.0
+soupsieve==2.8
 types-Flask-Cors==6.0.0.20250809
 typing_extensions==4.14.1
 Werkzeug==3.1.3
