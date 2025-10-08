@@ -122,6 +122,22 @@ function App() {
     }
   };
 
+  const formatDuration = (seconds) => {
+    if (seconds < 0) {
+      return '?:??';
+    }
+
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const remainingSeconds = seconds % 60;
+
+    if (hours > 0) {
+      return `${hours}:${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
+    } else {
+      return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -219,6 +235,9 @@ function App() {
                         e.target.src = 'https://via.placeholder.com/300x180/333/fff?text=No+Thumbnail';
                       }}
                     />
+                    <div className="duration-overlay">
+                      {formatDuration(video.duration)}
+                    </div>
                     <div className="play-button">▶</div>
                   </div>
 
