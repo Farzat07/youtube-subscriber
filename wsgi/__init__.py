@@ -1,3 +1,4 @@
+from datetime import datetime, UTC
 from typing import Any, Dict, List
 from components.database import subscriptions
 from components.subscriptions.main import Subscription
@@ -38,3 +39,26 @@ def add_sub() -> Dict[str, Any]:
     )
     sub.insert()
     return sub_info_from_dict(sub.asdict())
+
+@app.post("/set-time-between-fetches/")
+def set_time_between_fetches() -> Dict[str, Any]:
+    return {}
+
+@app.post("/set-viewed/")
+def set_viewed() -> Dict[str, Any]:
+    viewed_time_str = request.form.get("viewed_time")
+    if viewed_time_str:
+        print(viewed_time_str)
+        viewed_time = datetime.fromisoformat(viewed_time_str)
+    else:
+        viewed_time = datetime.now(tz=UTC)
+    result = subscriptions.update_one(
+        {"_id": request.form["_id"]},
+        {"$set": {"last_viewed": viewed_time}}
+    )
+    if not result.modified_count:
+        raise Exception("Subscription %s not found" % request.form["_id"])
+    return {
+        "_id": request.form["_id"],
+        "last_viewed": viewed_time,
+    }

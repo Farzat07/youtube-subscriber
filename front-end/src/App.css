@@ -376,6 +376,35 @@ body {
   transform: scale(1.05);
 }
 
+.new-overlay {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: linear-gradient(135deg, #ff6b6b, #ff4757);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
+  z-index: 2;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
+  }
+  50% {
+    box-shadow: 0 2px 16px rgba(255, 107, 107, 0.6);
+  }
+  100% {
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
+  }
+}
+
 .duration-overlay {
   position: absolute;
   bottom: 8px;
@@ -387,6 +416,7 @@ body {
   font-size: 0.8rem;
   font-weight: bold;
   backdrop-filter: blur(4px);
+  z-index: 2;
 }
 
 .play-button {
@@ -399,6 +429,7 @@ body {
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
   opacity: 0.9;
   transition: all 0.3s ease;
+  z-index: 1;
 }
 
 .video-card:hover .play-button {

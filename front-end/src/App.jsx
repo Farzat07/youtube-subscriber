@@ -36,9 +36,10 @@ function App() {
             id: id,
             _id: subscription._id,
             type: type,
-            title: subscription.title || id, // Use title if available, fallback to ID
+            title: subscription.title,
             last_fetch: subscription.last_fetch,
             last_video_update: subscription.last_video_update,
+            last_viewed: subscription.last_viewed,
             new_vids: subscription.new_vids,
             time_between_fetches: subscription.time_between_fetches,
             videos: subscription.videos
@@ -51,6 +52,23 @@ function App() {
       setError('Failed to fetch available subscriptions.');
     } finally {
       setChannelsLoading(false);
+    }
+  };
+
+  const setViewed = async (subscriptionId, viewedTime) => {
+    try {
+      const formData = new FormData();
+      formData.append('_id', subscriptionId);
+      formData.append('viewed_time', viewedTime);
+
+      await axios.post(`${API_BASE_URL}/set-viewed/`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+    } catch (err) {
+      console.error('Error setting viewed time:', err);
+      // Don't show error to user as this is a background operation
     }
   };
 
@@ -69,6 +87,9 @@ function App() {
 
       if (response.data && Array.isArray(response.data)) {
         setVideos(response.data);
+
+        const currentTime = new Date().toISOString();
+        setViewed(subscription._id, currentTime);
       } else {
         throw new Error('Invalid response format');
       }
@@ -305,7 +326,7 @@ function App() {
                     id="time-between-fetches"
                     type="number"
                     value={timeBetweenFetches}
-                    onChange={(e) => setTimeBetweenFetches(parseInt(e.target.value) || 300)}
+                    onChange={(e) => setTimeBetweenFetches(parseInt(e.target.value) || 0)}
                     min="60"
                     max="86400"
                     className="subscription-input"
@@ -387,6 +408,10 @@ function App() {
                     <div className="duration-overlay">
                       {formatDuration(video.duration)}
                     </div>
+                    {channels.find(ch => ch.id === selectedChannelId)?.last_viewed &&
+                     new Date(video.published) > new Date(channels.find(ch => ch.id === selectedChannelId).last_viewed) && (
+                      <div className="new-overlay">NEW</div>
+                    )}
                     <div className="play-button">▶</div>
                   </div>
 
