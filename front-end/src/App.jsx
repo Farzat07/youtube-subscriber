@@ -19,6 +19,10 @@ function App() {
   const [addingSubscription, setAddingSubscription] = useState(false);
   const [subscriptionError, setSubscriptionError] = useState(null);
   const [subscriptionSuccess, setSubscriptionSuccess] = useState(null);
+  const [editingSubscription, setEditingSubscription] = useState(null);
+  const [newTimeBetweenFetches, setNewTimeBetweenFetches] = useState(300);
+  const [updatingSubscription, setUpdatingSubscription] = useState(false);
+  const [deletingSubscription, setDeletingSubscription] = useState(false);
 
   const fetchChannels = async () => {
     try {
@@ -69,6 +73,57 @@ function App() {
     } catch (err) {
       console.error('Error setting viewed time:', err);
       // Don't show error to user as this is a background operation
+    }
+  };
+
+  const updateTimeBetweenFetches = async (subscriptionId, newTime) => {
+    try {
+      setUpdatingSubscription(true);
+      const formData = new FormData();
+      formData.append('_id', subscriptionId);
+      formData.append('time_between_fetches', newTime.toString());
+
+      await axios.post(`${API_BASE_URL}/set-time-between-fetches/`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      // Refresh the channels list to show updated data
+      fetchChannels();
+      setEditingSubscription(null);
+      setSubscriptionSuccess('Fetch interval updated successfully!');
+    } catch (err) {
+      console.error('Error updating fetch interval:', err);
+      setSubscriptionError('Failed to update fetch interval. Please try again.');
+    } finally {
+      setUpdatingSubscription(false);
+    }
+  };
+
+  const deleteSubscription = async (subscriptionId) => {
+    if (!window.confirm('Are you sure you want to delete this subscription? This action cannot be undone.')) {
+      return;
+    }
+
+    try {
+      setDeletingSubscription(true);
+      await axios.delete(`${API_BASE_URL}/delete-sub/${subscriptionId}`);
+
+      // If the deleted subscription was selected, clear the selection
+      if (selectedChannelId === subscriptionId.replace('yt:channel:', '').replace('yt:playlist:', '')) {
+        setSelectedChannelId('');
+        setVideos([]);
+      }
+
+      // Refresh the channels list
+      fetchChannels();
+      setSubscriptionSuccess('Subscription deleted successfully!');
+    } catch (err) {
+      console.error('Error deleting subscription:', err);
+      setSubscriptionError('Failed to delete subscription. Please try again.');
+    } finally {
+      setDeletingSubscription(false);
     }
   };
 
@@ -228,6 +283,16 @@ function App() {
     setSubscriptionSuccess(null);
   };
 
+  const startEditingSubscription = (subscription) => {
+    setEditingSubscription(subscription);
+    setNewTimeBetweenFetches(subscription.time_between_fetches);
+  };
+
+  const cancelEditing = () => {
+    setEditingSubscription(null);
+    setNewTimeBetweenFetches(300);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -286,9 +351,67 @@ function App() {
                   )}
                 </p>
               )}
+              <div className="subscription-actions">
+                <button
+                  onClick={() => startEditingSubscription(channels.find(ch => ch.id === selectedChannelId))}
+                  className="edit-button"
+                >
+                  ⚙️ Edit
+                </button>
+                <button
+                  onClick={() => deleteSubscription(channels.find(ch => ch.id === selectedChannelId)?._id)}
+                  className="delete-button"
+                  disabled={deletingSubscription}
+                >
+                  {deletingSubscription ? 'Deleting...' : '🗑️ Delete'}
+                </button>
+              </div>
             </div>
           )}
         </div>
+
+        {editingSubscription && (
+          <div className="edit-subscription-modal">
+            <div className="edit-subscription-content">
+              <h3>Edit Subscription</h3>
+              <div className="form-group">
+                <label htmlFor="edit-time-between-fetches">
+                  Fetch Interval (seconds):
+                </label>
+                <input
+                  id="edit-time-between-fetches"
+                  type="number"
+                  value={newTimeBetweenFetches}
+                  onChange={(e) => setNewTimeBetweenFetches(parseInt(e.target.value) || 0)}
+                  min="60"
+                  max="86400"
+                  className="subscription-input"
+                  disabled={updatingSubscription}
+                />
+                <small className="interval-help">
+                  How often to check for new videos (current: {editingSubscription.time_between_fetches}s)
+                </small>
+              </div>
+              <div className="form-actions">
+                <button
+                  onClick={() => updateTimeBetweenFetches(editingSubscription._id, newTimeBetweenFetches)}
+                  className="submit-subscription"
+                  disabled={updatingSubscription}
+                >
+                  {updatingSubscription ? 'Updating...' : 'Update'}
+                </button>
+                <button
+                  onClick={cancelEditing}
+                  className="cancel-button"
+                  disabled={updatingSubscription}
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className="subscription-section">
           <button
             onClick={() => {

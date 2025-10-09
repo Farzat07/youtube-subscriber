@@ -42,13 +42,29 @@ def add_sub() -> Dict[str, Any]:
 
 @app.post("/set-time-between-fetches/")
 def set_time_between_fetches() -> Dict[str, Any]:
-    return {}
+    time_between_fetches = int(request.form["time_between_fetches"])
+    result = subscriptions.update_one(
+        {"_id": request.form["_id"]},
+        {"$set": {"time_between_fetches": time_between_fetches}}
+    )
+    if not result.modified_count:
+        raise Exception("Subscription %s not found" % request.form["_id"])
+    return {
+        "_id": request.form["_id"],
+        "time_between_fetches": time_between_fetches,
+    }
+
+@app.delete("/delete-sub/<id>")
+def delete_sub(id: str) -> Dict[str, Any]:
+    result = subscriptions.delete_one({"_id": id})
+    if not result.deleted_count:
+        raise Exception("Subscription %s not found" % id)
+    return { "_id": id, }
 
 @app.post("/set-viewed/")
 def set_viewed() -> Dict[str, Any]:
     viewed_time_str = request.form.get("viewed_time")
     if viewed_time_str:
-        print(viewed_time_str)
         viewed_time = datetime.fromisoformat(viewed_time_str)
     else:
         viewed_time = datetime.now(tz=UTC)
