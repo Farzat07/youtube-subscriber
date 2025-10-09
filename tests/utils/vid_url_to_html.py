@@ -18,5 +18,5 @@ def get_vid_html_from_url(url: str) -> str:
     with open(f'tests/data/video@{extract_vid_id(url)}.html', 'r') as file:
         return file.read()
 
-def obtain_vid_duration(url:str, html: str = '') -> int:
+def obtain_vid_duration(url:str, vid_id:str, html:str='', api_key:str='') -> int:
     return get_random_vid_duration(url)
