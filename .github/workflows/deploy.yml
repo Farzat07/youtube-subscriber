@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ deploy ]
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 permissions:
   contents: read
   pages: write
@@ -54,7 +58,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
 
-    # You can also set permissions at the job level
     permissions:
       pages: write
       id-token: write
