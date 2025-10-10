@@ -14,7 +14,7 @@ client: MongoClient[Any] = MongoClient(
     "mongodb://%s:%s@localhost/admin" % (getenv('MONGO_USER'), getenv('MONGO_PASS')),
     tz_aware=True,
 )
-database: Database[Any] = client.get_database("youtube")
+database: Database[Any] = client.get_database(getenv('YT_DB') or "youtube")
 subscriptions: Collection[SubsDict] = database.get_collection("subscriptions")
 users: Collection[UserDict] = database.get_collection("users")
 
