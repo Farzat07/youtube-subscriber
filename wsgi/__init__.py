@@ -15,16 +15,18 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route("/vid-from-link/<id>")
-def videos_from_link(id: str) -> List[Dict[str, Any]]:
+def videos_from_link(id: str) -> Tuple[List[Dict[str, Any]], int]:
     sub_dict = subscriptions.find_one({"_id": id})
-    assert sub_dict
-    return vid_dicts_from_tuple_list(sub_dict["videos"])
+    if sub_dict:
+        return vid_dicts_from_tuple_list(sub_dict["videos"]), 200
+    return [{'error': "Subscription %s not found"%id }], 404
 
 @app.route("/sub-info/<id>")
-def sub_dict(id: str) -> Dict[str, Any]:
+def sub_dict(id: str) -> Tuple[Dict[str, Any], int]:
     sub_dict = subscriptions.find_one({"_id": id})
-    assert sub_dict
-    return sub_info_from_dict(sub_dict)
+    if sub_dict:
+        return sub_info_from_dict(sub_dict), 200
+    return {'error': "Subscription %s not found"%id }, 404
 
 @app.route("/subs-info")
 def subs_info() -> List[Dict[str, Any]]:
