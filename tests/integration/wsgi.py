@@ -65,5 +65,50 @@ class TestFlask(TestCase):
         })
         self.assertEqual(response.status_code, 409)
 
+    def test_subs_info(self) -> None:
+        # Should be empty at start.
+        response = self.client.get("/subs-info")
+        self.assertEqual(response.status_code, 200)
+        response_data = response.get_json()
+        self.assertListEqual(response_data, [])
+        # Fetching any individual subscription now should fail.
+        response = self.client.get("/sub-info/yt:channel:Ba659QWEk1AI4Tg--mrJ2A")
+        self.assertEqual(response.status_code, 404)
+        # Fetching the videos of an individual subscription should also fail.
+        response = self.client.get("/vid-from-link/yt:channel:Ba659QWEk1AI4Tg--mrJ2A")
+        self.assertEqual(response.status_code, 404)
+        # Now add some data to test on...
+        self.client.post("/add-sub/", data={
+            'url': "https://www.youtube.com/channel/UCBa659QWEk1AI4Tg--mrJ2A",
+            'time_between_fetches': 1,
+        })
+        self.client.post("/add-sub/", data={
+            'url': "https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr",
+            'time_between_fetches': 1,
+        })
+        # Now should contain 2 subscriptions.
+        response = self.client.get("/subs-info")
+        self.assertEqual(response.status_code, 200)
+        response_data = response.get_json()
+        self.assertEqual(len(response_data), 2)
+        for sub_info in response_data:
+            self.assertEqual(sub_info["videos"], 0)
+        # Now fetching an added subscriptions should work.
+        response = self.client.get("/sub-info/yt:channel:Ba659QWEk1AI4Tg--mrJ2A")
+        self.assertEqual(response.status_code, 200)
+        response_data = response.get_json()
+        self.assertEqual(response_data["_id"], "yt:channel:Ba659QWEk1AI4Tg--mrJ2A")
+        # Same for its videos - though they should still be empty.
+        response = self.client.get("/vid-from-link/yt:channel:Ba659QWEk1AI4Tg--mrJ2A")
+        self.assertEqual(response.status_code, 200)
+        response_data = response.get_json()
+        self.assertListEqual(response_data, [])
+        # Subscriptions not added should still not work.
+        response = self.client.get("/sub-info/yt:channel:7YOGHUfC1Tb6E4pudI9STA")
+        self.assertEqual(response.status_code, 404)
+        # Same for for their videos.
+        response = self.client.get("/vid-from-link/yt:channel:7YOGHUfC1Tb6E4pudI9STA")
+        self.assertEqual(response.status_code, 404)
+
     def tearDown(self) -> None:
         subscriptions.delete_many({})
