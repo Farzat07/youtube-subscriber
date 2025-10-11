@@ -1,4 +1,7 @@
+from datetime import datetime, UTC
 from unittest import TestCase
+
+from werkzeug.http import parse_date
 
 from components.database import subscriptions
 from wsgi import app
@@ -108,6 +111,61 @@ class TestFlask(TestCase):
         self.assertEqual(response.status_code, 404)
         # Same for for their videos.
         response = self.client.get("/vid-from-link/yt:channel:7YOGHUfC1Tb6E4pudI9STA")
+        self.assertEqual(response.status_code, 404)
+
+    def test_modify_subs(self) -> None:
+        # Confirm all methods do not work before the item exists.
+        response = self.client.patch("/set-time-between-fetches/yt:channel:Ba659QWEk1AI4Tg--mrJ2A", data={
+            'time_between_fetches': 313,
+        })
+        self.assertEqual(response.status_code, 404)
+        response = self.client.patch("/set-viewed/yt:channel:Ba659QWEk1AI4Tg--mrJ2A", data={
+            'viewed_time': datetime.now(tz=UTC).isoformat(),
+        })
+        self.assertEqual(response.status_code, 404)
+        response = self.client.delete("/delete-sub/yt:channel:Ba659QWEk1AI4Tg--mrJ2A")
+        self.assertEqual(response.status_code, 404)
+        # Now add some data to test on...
+        self.client.post("/add-sub/", data={
+            'url': "https://www.youtube.com/channel/UCBa659QWEk1AI4Tg--mrJ2A",
+            'time_between_fetches': 1,
+        })
+        # Test set-time-between-fetches.
+        response = self.client.patch("/set-time-between-fetches/yt:channel:Ba659QWEk1AI4Tg--mrJ2A", data={
+            'time_between_fetches': 31323,
+        })
+        self.assertEqual(response.status_code, 200)
+        # Should not work if an integer is not provided.
+        response = self.client.patch("/set-time-between-fetches/yt:channel:Ba659QWEk1AI4Tg--mrJ2A", data={
+            'time_between_fetches': 31.3,
+        })
+        self.assertEqual(response.status_code, 400)
+        # Test set-viewed.
+        update_time_to = datetime.now(tz=UTC)
+        response = self.client.patch("/set-viewed/yt:channel:Ba659QWEk1AI4Tg--mrJ2A", data={
+            'viewed_time': update_time_to.isoformat(),
+        })
+        self.assertEqual(response.status_code, 200)
+        response_data = response.get_json()
+        self.assertEqual(update_time_to.replace(microsecond=0), parse_date(response_data["last_viewed"]))
+        # Should not work with an invalid datetime string.
+        response = self.client.patch("/set-viewed/yt:channel:Ba659QWEk1AI4Tg--mrJ2A", data={
+            'viewed_time': "Monday 11th of February 2023",
+        })
+        self.assertEqual(response.status_code, 400)
+        # Should work fine without a viewed_time set though...
+        time_before_updating = datetime.now(tz=UTC)
+        response = self.client.patch("/set-viewed/yt:channel:Ba659QWEk1AI4Tg--mrJ2A")
+        self.assertEqual(response.status_code, 200)
+        response_data = response.get_json()
+        last_viewed = parse_date(response_data["last_viewed"])
+        assert last_viewed
+        self.assertLessEqual(time_before_updating.replace(microsecond=0), last_viewed)
+        # Delete the subscription.
+        response = self.client.delete("/delete-sub/yt:channel:Ba659QWEk1AI4Tg--mrJ2A")
+        self.assertEqual(response.status_code, 200)
+        # Make sure the item no longer exists.
+        response = self.client.get("/sub-info/yt:channel:Ba659QWEk1AI4Tg--mrJ2A")
         self.assertEqual(response.status_code, 404)
 
     def tearDown(self) -> None:
