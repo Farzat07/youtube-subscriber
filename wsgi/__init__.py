@@ -1,11 +1,13 @@
 from datetime import datetime, UTC
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Tuple
+
+from flask import Flask, request
+from flask_cors import CORS
+from pymongo.errors import DuplicateKeyError
+
 from components.database import subscriptions
 from components.subscriptions.main import Subscription
 from components.videos import VideoTuple
-from flask import Flask, request
-from flask_cors import CORS
-
 from components.extractor.extract_sub_info import get_sub_info_from_yt_url
 from .utils import vid_dicts_from_tuple_list, sub_info_from_dict
 
@@ -29,16 +31,23 @@ def subs_info() -> List[Dict[str, Any]]:
     return [sub_info_from_dict(sub_dict) for sub_dict in subscriptions.find()]
 
 @app.post("/add-sub/")
-def add_sub() -> Dict[str, Any]:
-    sub_info = get_sub_info_from_yt_url(request.form["url"])
+def add_sub() -> Tuple[Dict[str, Any], int]:
+    try:
+        sub_info = get_sub_info_from_yt_url(request.form["url"])
+        time_between_fetches = int(request.form["time_between_fetches"])
+    except:
+        return {'error': 'Invalid data'}, 400
     sub = Subscription(
         _id=sub_info["id"],
         link=sub_info["link"],
         title=sub_info["title"],
-        time_between_fetches=int(request.form["time_between_fetches"]),
+        time_between_fetches=time_between_fetches,
     )
-    sub.insert()
-    return sub_info_from_dict(sub.asdict())
+    try:
+        sub.insert()
+        return sub_info_from_dict(sub.asdict()), 201
+    except DuplicateKeyError:
+        return {'error': "Subscription %s already exists"%sub_info["id"] }, 409
 
 @app.post("/set-time-between-fetches/")
 def set_time_between_fetches() -> Dict[str, Any]:
