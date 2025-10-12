@@ -1,10 +1,10 @@
 from os import getenv
 from unittest import TestCase
 
+from api import app
 from components.database import subscriptions
 from data_analyser.utils import analyse_collection
 from data_collector.utils import collect_data
-from wsgi import app
 
 class TestIntegration(TestCase):
     def setUp(self) -> None:

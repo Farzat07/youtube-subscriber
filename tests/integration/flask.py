@@ -3,8 +3,8 @@ from unittest import TestCase
 
 from werkzeug.http import parse_date
 
+from api import app
 from components.database import subscriptions
-from wsgi import app
 
 class TestFlask(TestCase):
     def setUp(self) -> None:
