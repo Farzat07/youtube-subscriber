@@ -51,41 +51,47 @@ def add_sub() -> Tuple[Dict[str, Any], int]:
     except DuplicateKeyError:
         return {'error': "Subscription %s already exists"%sub_info["id"] }, 409
 
-@app.post("/set-time-between-fetches/")
-def set_time_between_fetches() -> Dict[str, Any]:
-    time_between_fetches = int(request.form["time_between_fetches"])
+@app.patch("/set-time-between-fetches/<id>")
+def set_time_between_fetches(id: str) -> Tuple[Dict[str, Any], int]:
+    try:
+        time_between_fetches = int(request.form["time_between_fetches"])
+    except:
+        return {'error': 'Invalid data'}, 400
     result = subscriptions.update_one(
-        {"_id": request.form["_id"]},
+        {"_id": id},
         {"$set": {"time_between_fetches": time_between_fetches}}
     )
-    if not result.modified_count:
-        raise Exception("Subscription %s not found" % request.form["_id"])
-    return {
-        "_id": request.form["_id"],
-        "time_between_fetches": time_between_fetches,
-    }
+    if result.modified_count:
+        return {
+            "_id": id,
+            "time_between_fetches": time_between_fetches,
+        }, 200
+    return {'error': "Subscription %s not found"%id }, 404
 
 @app.delete("/delete-sub/<id>")
-def delete_sub(id: str) -> Dict[str, Any]:
+def delete_sub(id: str) -> Tuple[Dict[str, Any], int]:
     result = subscriptions.delete_one({"_id": id})
     if not result.deleted_count:
-        raise Exception("Subscription %s not found" % id)
-    return { "_id": id, }
+        return {'error': "Subscription %s not found"%id }, 404
+    return { "_id": id, }, 200
 
-@app.post("/set-viewed/")
-def set_viewed() -> Dict[str, Any]:
+@app.patch("/set-viewed/<id>")
+def set_viewed(id:str) -> Tuple[Dict[str, Any], int]:
     viewed_time_str = request.form.get("viewed_time")
     if viewed_time_str:
-        viewed_time = datetime.fromisoformat(viewed_time_str)
+        try:
+            viewed_time = datetime.fromisoformat(viewed_time_str)
+        except:
+            return {'error': 'Invalid data'}, 400
     else:
         viewed_time = datetime.now(tz=UTC)
     result = subscriptions.update_one(
-        {"_id": request.form["_id"]},
+        {"_id": id},
         {"$set": {"last_viewed": viewed_time}}
     )
-    if not result.modified_count:
-        raise Exception("Subscription %s not found" % request.form["_id"])
-    return {
-        "_id": request.form["_id"],
-        "last_viewed": viewed_time,
-    }
+    if result.modified_count:
+        return {
+            "_id": id,
+            "last_viewed": viewed_time,
+        }, 200
+    return {'error': "Subscription %s not found"%id }, 404
