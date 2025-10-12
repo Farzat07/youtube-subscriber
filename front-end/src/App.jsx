@@ -62,10 +62,9 @@ function App() {
   const setViewed = async (subscriptionId, viewedTime) => {
     try {
       const formData = new FormData();
-      formData.append('_id', subscriptionId);
       formData.append('viewed_time', viewedTime);
 
-      await axios.post(`${API_BASE_URL}/set-viewed/`, formData, {
+      await axios.patch(`${API_BASE_URL}/set-viewed/${subscriptionId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -80,10 +79,9 @@ function App() {
     try {
       setUpdatingSubscription(true);
       const formData = new FormData();
-      formData.append('_id', subscriptionId);
       formData.append('time_between_fetches', newTime.toString());
 
-      await axios.post(`${API_BASE_URL}/set-time-between-fetches/`, formData, {
+      await axios.patch(`${API_BASE_URL}/set-time-between-fetches/${subscriptionId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
