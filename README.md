@@ -217,6 +217,8 @@ A few utilities to implement the mocks are stored in the `utils/` subdirectory. 
 packages were also installed, such as `mongomock`, which creates very realistic and
 fast mocks of MongoDB databases.
 
+Unit tests for this project run in under 1 second.
+
 #### Integration tests
 
 These are stored in the `integration/` subdirectory, and they test how well different
@@ -230,3 +232,87 @@ URL calls.
 In addition, instead of calling internal function, the main functions of each of
 the data collector and analyser are called to simulate the real function. Flask also
 provides a way to simulate real API calls using `app.test_client()`.
+
+Integration tests for this project run in around half a minute, depending on the
+machine and internet connection.
+
+## Workflow and Deployment
+
+First, before the code leaves the machine, it passes through two testing phases:
+
+1. Pre-commit. This runs the type checker and runs **only** the unit tests. This
+is because integration tests take too long to be run at each commit. Moreover, one
+commit might change something which affects the integration, while the other part
+might be scheduled to match it in the next commit.
+2. Pre-push. This runs the type checker and **all** checks. This is because pushed
+code is expected to integrate properly and be ready for production.
+
+Here is the code for the pre-commit hook:
+
+```bash
+#!/usr/bin/env sh
+
+echo "Running pre-commit checks..."
+
+# Ensure we're at the project root
+git_root=$(git rev-parse --show-toplevel 2>/dev/null)
+if [ $? -ne 0 ]; then
+    echo "This script must be run within a Git repository"
+    exit 1
+fi
+cd "$git_root" || exit 1
+
+# Check if virtual environment exists
+if [ ! -d "venv" ]; then
+    echo "Error: Virtual environment 'venv' not found."
+    echo "Please create it with: python -m venv venv"
+    exit 1
+fi
+
+# Run mypy type checking
+if ! venv/bin/mypy --explicit-package-bases --strict .; then
+    exit 1
+fi
+
+# Run tests
+if ! venv/bin/python -m unittest tests/*.py; then
+    exit 1
+fi
+
+echo "End of pre-commit hook."
+```
+
+Here is the code for the pre-push hook:
+
+```bash
+#!/usr/bin/env bash
+
+echo "Running pre-push checks..."
+
+# Ensure we're at the project root
+git_root=$(git rev-parse --show-toplevel 2>/dev/null)
+if [ $? -ne 0 ]; then
+    echo "This script must be run within a Git repository"
+    exit 1
+fi
+cd "$git_root" || exit 1
+
+# Check if virtual environment exists
+if [ ! -d "venv" ]; then
+    echo "Error: Virtual environment 'venv' not found."
+    echo "Please create it with: python -m venv venv"
+    exit 1
+fi
+
+# Run mypy type checking
+if ! venv/bin/mypy --explicit-package-bases --strict .; then
+    exit 1
+fi
+
+# Run tests
+if ! YT_DB=testing venv/bin/python -m unittest tests{,/integration}/*.py; then
+    exit 1
+fi
+
+echo "End of pre-push hook."
+```
