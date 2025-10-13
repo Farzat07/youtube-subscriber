@@ -92,3 +92,36 @@ MongoDB before and felt comfortable with its JSON-like syntax. I was set on lear
 SQL, but that was going to take some time and I did not want to wait until I learned
 it to start the project. Now that I am taking the [Databases](https://www.colorado.edu/program/data-science/databases)
 specialisation though, if I were to redo the project I would definitely use SQL.
+
+## Requirements
+
+### User requirements
+
+1. The user should be able to add subscriptions using their YouTube URLs (channels
+or playlists).
+2. The user should be able to set and modify the duration between fetches for each
+subscription (some may upload more frequently than others).
+3. The user should be able to delete subscriptions.
+4. The user should be able to see the videos of each subscription along with the
+duration of each video.
+5. New videos (added since last time viewed) should be indicated to the user.
+
+### System requirements
+
+1. The application should be able to verify valid YouTube URLs.
+2. The application should be able to identify valid subscription.
+3. The application should be able to convert channel/playlist URLs to feed links.
+4. The flask application should have CRUD APIs set up.
+5. The data collector should be able to fetch each subscription with the appropriate
+interval between fetches (set duration + <= 60s).
+6. The data collector should be able to identify new/updated videos.
+7. The data analyser should update all non-analysed videos in each iteration.
+8. The data analyser should get the correct duration (as long as the video is not
+private for example).
+9. The database (MongoDB in this example) should store the data persistently.
+10. The React.js application should be able to correctly communicate with the appropriate
+APIs from the flask application.
+
+All of these are easy to test. That being said, some of them, like 5., would take
+a considerable time to test, even for an integration test. For the purpose of this
+project, only tests taking under a minute were allowed into the integration test.
