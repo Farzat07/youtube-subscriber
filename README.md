@@ -238,6 +238,8 @@ machine and internet connection.
 
 ## Workflow and Deployment
 
+### Local hooks
+
 First, before the code leaves the machine, it passes through two testing phases:
 
 1. Pre-commit. This runs the type checker and runs **only** the unit tests. This
@@ -316,3 +318,65 @@ fi
 
 echo "End of pre-push hook."
 ```
+
+### After it reaches the VPS
+
+Once the push is accepted, the server runs a post-receive hook. This hook checks
+if the `deploy` branch has been updated, and if so it checks out the branch in the
+deployment directory, downloads any new python packages in the virtual environment,
+runs type checking, unit tests, and integration tests, and if everything passes it
+deploys the new code.
+
+First it reloads the docker containers. To make management easier, MongoDB and RabbitMQ
+are run as docker containers, and these might get restarted by the hook if `docker-compose.yml`
+was updated.
+
+Then it interrupts the 3 python services by sending a `USR2` signal. This makes the
+data collector and data analyser processes quit and start over, while gunicorn starts
+new subprocesses with the new code then removes the old ones to eliminate downtime
+on the back-end API server.
+
+You can see how the post-receive hook is implemented here:
+
+```bash
+#!/usr/bin/env bash
+
+ROOT=/srv/csca5028
+VENV="$ROOT/venv"
+PIP="$VENV/bin/pip"
+PYTHON="$VENV/bin/python"
+
+github_url="git@github.com:Farzat07/youtube-subscriber.git"
+
+[ -d "$ROOT" ] || mkdir -p "$ROOT"
+[ -d "$VENV" ] || python -m venv "$VENV"
+
+while read oldrev newrev refname
+do
+    BRANCH_NAME="${refname#refs/heads/}"
+    printf "refname: %s branchname: %s\n" "$refname" "$BRANCH_NAME"
+    if [ "$BRANCH_NAME" = deploy ]; then
+        GIT_WORK_TREE="$ROOT" git checkout -f "$BRANCH_NAME" || exit
+        "$PIP" install -r "$ROOT/requirements.txt"
+        # Run tests.
+        if ! (cd "$ROOT"; "$VENV"/bin/mypy --explicit-package-bases --strict .) ||
+            ! (cd "$ROOT"; YT_DB=testing "$PYTHON" -m unittest "$ROOT"/tests{,/integration}/*.py)
+            then
+            exit 1
+        fi
+        # Reload services.
+        (cd "$ROOT"; docker compose up -d --remove-orphans)
+        pkill -USR2 -u gitolite -f "$PYTHON"
+    fi
+done
+
+git push --mirror "$github_url"
+```
+
+As you can see, the data is also pushed to GitHub, where the front-end will be deployed.
+
+Nginx forwards all traffic sent to the flask API server to the gunicorn processes.
+The docker containers and 3 python processes are all kept running even after host
+restarts using systemd services. The systemd services are also instructed to restart
+the data collector and data analyser services if they were interrupted by the `USR2`
+signal.
