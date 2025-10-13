@@ -66,10 +66,10 @@ it was overkill. Instead, web scraping done directly, as it has a lower chance o
 failing ([yt-dlp](https://github.com/yt-dlp/yt-dlp) fetches many details about a
 video increasing the points of failure and the chance of being blocked by YouTube).
 To top that off, YouTube blocks all calls to video URLs from non-residential IP
-addresses without login, which meant that the API had to be used in production.
+addresses without login, which meant that the YouTube API had to be used in production.
 4. As [yt-dlp](https://github.com/yt-dlp/yt-dlp) was no longer used, it made no
 sense to separate the fetching of the feed URLs from the API server. The channel
-URLs were not blocked by YouTube, so only web scraping is used.
+URLs were not blocked by YouTube, so only web scraping was used.
 
 ## SQL vs NoSQL
 
@@ -125,3 +125,108 @@ APIs from the flask application.
 All of these are easy to test. That being said, some of them, like 5., would take
 a considerable time to test, even for an integration test. For the purpose of this
 project, only tests taking under a minute were allowed into the integration test.
+
+## A breakdown of the project directory
+
+Let's start with the `components/` directory:
+
+- `videos.py` defines the video datatype and a function which generates an object
+from a feed item.
+- `database.py` prepares the appropriate database collection for the `Subscription`
+class.
+- `subscriptions/` contains `typing.py`, which defines how the dictionary form of
+the subscriptions (for [mypy](https://www.mypy-lang.org/) typing of the database
+collection), while `main.py` contains the actual `Subscription` class, which has
+the appropriate functions for fetching the RSS feed and database CRUD operations.
+- `extractor/` contains functions designed to extract information about a YouTube
+object. It is sometimes done from the URL directly (such as obtaining a Playlist's
+feed link), or by web scraping (such as that of a Channel), or even by YouTube's
+API (such as the duration of a video). Most of these functions accept html input
+to facilitate mocking during tests.
+
+Note that you do not need to setup YouTube API at all for any of the functions
+unless you are running it on a non-residential server. YouTube API will only be
+used if a key is provided as an environment variable.
+
+### Data collector
+
+It is stored in the `data_collector/` directory.
+
+`utils.py` defines the core function that actually loops through the collection,
+identifies which subscriptions are due to be fetched, and calls the `.fetch()` function
+on them. `__main__()` imports that function and runs it periodically (every minute).
+
+This design was chosen to make integration testing easier. Instead of having to call
+a separate process, one can just import the `collect_data()` function and call it
+to test the outcome. In production, the process is run by calling `python -m data_collector`,
+which automatically runs the `__main__.py` file.
+
+Most of the heavy-lifting is done by the `.fetch()` function from the `Subscription`
+component, which is thoroughly tested in the `feed.py` unit test.
+
+### Data Analyser
+
+It is stored in the `data_analyser/` directory.
+
+This is divided into `utils.py` and `__main__.py` for the same reason as the data
+collector. The main difference is that the main function in `utils.py` is factored
+into smaller functions. This makes it easy to write very specific unit tests.
+
+### Flask application
+
+It is stored in the `api/` directory.
+
+While some helper functions are stored in `utils.py`, most of the functions are stored
+in `__init__.py`, including flask's `app` object. This allows it to be easily found
+by wsgi applications (`api:app`) as `import api` will import `__init__.py` automatically.
+
+I did not use the same structure as the data collector or analyser as the flask
+endpoints are not easily testable using unit tests as the other two. Instead, the
+main testing will be done in integration tests using `from api import app`.
+
+The flask app mostly implements a REST API interface for the front-end.
+
+### React.js app
+
+It is stored in the `front-end/` directory.
+
+It is a basic web application with form functionality for CRUD operations. The main
+code can be found in the `src/` subdirectory. It communicates with the flask application
+using REST API.
+
+When a subscription is selected, its videos are displayed and `last_viewed` is set
+to that point in time. New videos since the last view will have a special indicator
+over them.
+
+### Tests
+
+All tests are in the `tests/` directory. They are divided into two types:
+
+#### Unit tests
+
+These are the python scripts right under the `tests/` directory. Each file tests
+a different function or area of the code. Unit tests are designed to test a specific
+functionality, and are expected to be FIRST: Fast, Isolated, Repeatable, Self-validating,
+and Timely. This means that **MOCKS** are heavily used, as external dependencies
+would otherwise slow down the execution of the code and the tests would not be isolated,
+as failure of the test could be caused by a problem with the external dependency
+instead of the code itself. **FAKE DATA**, which is stored in the `data/` subdirectory,
+is necessary too to empower the mocks to be real-like.
+
+A few utilities to implement the mocks are stored in the `utils/` subdirectory. Specialised
+packages were also installed, such as `mongomock`, which creates very realistic and
+fast mocks of MongoDB databases.
+
+#### Integration tests
+
+These are stored in the `integration/` subdirectory, and they test how well different
+parts of the application work with each other. This means that mocks/fake data would
+not be used normally, as these often mask the functionality of the other components
+with which we want to test the integration. This means that the real database instance
+has to be used (in an isolated testing area). YouTube API calls are also used when
+testing on the production server, while local testing uses web scraping of real
+URL calls.
+
+In addition, instead of calling internal function, the main functions of each of
+the data collector and analyser are called to simulate the real function. Flask also
+provides a way to simulate real API calls using `app.test_client()`.
