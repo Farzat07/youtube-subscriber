@@ -418,3 +418,18 @@ For non-production, the API back-end can be started by running `flask --app api:
 run`. For production use, make sure to use gunicorn instead. The command I used is:
 `gunicorn --workers 3 --bind unix:/srv/csca5028/flask.sock --umask 007
 --access-logfile - --error-logfile - api:app`.
+
+## What about Message Queues
+
+While I did make preparations to use it (set up the docker container), I never did
+end up implementing it in the code. This is because there was little need for the
+processes to communicate with each other, and there was little time left to come
+up with one. One possible usage would be adding the functionality to order the fetch
+of a subscription "right now" using the front-end, which would require the flask
+application to communicate with the data_collector, but unfortunately I did not have
+time to develop that functionality.
+
+One other possible usage is using it to scale the data collector and data analyser.
+Each would have a master process which coordinates the fetching, and child processes
+would receive fetch orders through message queues. Though this would be an overkill
+for the current scale of the project, but as it expands it might become necessary.
