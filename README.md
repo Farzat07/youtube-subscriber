@@ -396,3 +396,25 @@ This requirement is achieved by the GitHub workflow stored in `.github/workflows
 which properly builds the react application from jsx to browser-readable js, exports
 the output as a container (artifact), and then deploys the resulting website to
 GitHub pages.
+
+### How to deploy yourself
+
+First of all, make sure to set the environment variables, either directly or by
+writing to a `.env` file at the root directory. The expected environment variables
+are `MONGO_USER`, `MONGO_PASS`, `RABBIT_USER`, `RABBIT_PASS`, `VITE_API_BASE_URL`,
+and `YOUTUBE_API_KEY`. The `VITE_API_BASE_URL` is the URL from which to access the
+API flask server, while `YOUTUBE_API_KEY` is only needed if running from a non-residential
+server.
+
+Next, make sure to have the docker containers up and running by executing `docker-compose
+up` at the root directory.
+
+To install the python dependencies, run `pip install -r requirements.txt`.
+
+The data collector and data analyser scripts are started by running `python -m data_collector`
+and `python -m data_analyser` respectively.
+
+For non-production, the API back-end can be started by running `flask --app api:app
+run`. For production use, make sure to use gunicorn instead. The command I used is:
+`gunicorn --workers 3 --bind unix:/srv/csca5028/flask.sock --umask 007
+--access-logfile - --error-logfile - api:app`.
