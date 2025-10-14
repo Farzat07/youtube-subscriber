@@ -380,3 +380,19 @@ The docker containers and 3 python processes are all kept running even after hos
 restarts using systemd services. The systemd services are also instructed to restart
 the data collector and data analyser services if they were interrupted by the `USR2`
 signal.
+
+### GitHub CI/CD
+
+While the above post-receive hook employs **Continuous Integration** by thoroughly
+testing the code before deployment, and **Continuous Deployment** by deploying the
+code into production on push, it is not necessarily what comes to mind when a CI/CD
+pipeline is discussed.
+
+Many components were missing such as test environment isolation, and both testing
+and deployment were tightly coupled into the same script. Most importantly, **Continuous
+Delivery** was not employed as there was no build stage or output artifacts.
+
+This requirement is achieved by the GitHub workflow stored in `.github/workflows/cicd.yml`,
+which properly builds the react application from jsx to browser-readable js, exports
+the output as a container (artifact), and then deploys the resulting website to
+GitHub pages.
